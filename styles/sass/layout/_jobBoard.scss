@@ -1,28 +1,127 @@
-.job__board {
+.grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px 15px;
-    margin: 70px auto 90px;
-    width: 100%;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    padding: 1rem 1.5rem;
+    gap: 4rem 2rem;
 
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+    &-item {
+        background-color: $white;
+        border-radius: .375rem;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+        position: relative;
+        padding: 0 2rem 2rem;
 
-    @include rwd(950) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 60px 10px;
-    }
+        .company-logo {
+            border-radius: 1rem;
+            display: grid;
+            place-items: center;
+            font-family: 'Kumbh Sans Bold', sans-serif;
+            width: 3rem;
+            height: 3rem;
+            color: $white;
+            position: absolute;
+            padding: .5rem;
+            transform: translateY(-50%);
 
-    @include rwd(600) {
-        grid-template-columns: 1fr;
-        grid-gap: 70px 0;
-        margin: 60px auto 50px;
+        }
 
-        &.blur {
-            filter: blur(2px);
-            pointer-events: none;
+        .job-time {
+            display: flex;
+            padding-top: 3rem;
+            color: $gray-dark;
+            line-height: 1.25rem;
+            align-items: center;
+
+            .dot {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+                margin-left: 1.5rem;
+            }
+
+            .time {
+                margin-left: .75rem;
+            }
+        }
+
+        .job-title {
+            margin-top: .75rem;
+
+            h2 {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                font-family: 'Kumbh Sans Bold', sans-serif;
+    
+            }
+        }
+
+        .company-name {
+            margin-top: .78rem;
+
+            p {
+                color: $gray-dark;
+                line-height: 1.25rem;
+            }
+        }
+
+        .job-location {
+            margin-top: 2.5rem;
+
+            p {
+                color: $primary-color;
+                font-family: 'Kumbh Sans Bold', sans-serif;
+                font-size: .875rem;
+                line-height: 1.25rem;
+            }
+        }
+
+        .view-details {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            cursor: pointer;
+            transition: background-color .5s ease;
+
+            &:hover {
+                background-color: $gray-light;
+            }
+
+            .primary-color {
+                color: hsl(235, 60%, 61%);
+            }
+            
+            .fill-current {
+                fill: currentColor;
+            }
+            
+            .h-5 {
+                height: 1.25rem;
+            }
+            
+            .w-5 {
+                width: 1.25rem;
+            }
+
+            .view {
+                text-transform: uppercase;
+                letter-spacing: .9px;
+                font-size: .875rem;
+                line-height: 1.25rem;
+                color: $primary-color;
+                margin-left: 5px;
+                margin-top: 2px;
+                font-family: 'Kumbh Sans Bold', sans-serif;
+                font-weight: 600;
+            }
         }
     }
+}
+
+.load-more-box {
+    display: grid;
+    place-items: center;
+    padding: 10px 0;
+    margin: 30px 0;
 }
