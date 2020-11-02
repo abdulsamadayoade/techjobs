@@ -11,10 +11,6 @@
 html {
     font-family: 'Kumbh Sans Regular', sans-serif;
     scroll-behavior: smooth;
-    font-size: 15px;
-    color: var(--text--main);
-}
-
-h1, h2, h3, h4, p > strong {
-    color: var(--heading)
+    font-size: 16px;
+    color: $primary-color-dark;
 }
