@@ -1,5 +1,5 @@
 .container {
-  max-width: 1150px;
+  max-width: 1300px;
   padding: 0 25px;
   margin: 0 auto;
 }
@@ -66,12 +66,8 @@ body {
 html {
   font-family: 'Kumbh Sans Regular', sans-serif;
   scroll-behavior: smooth;
-  font-size: 15px;
-  color: var(--text--main);
-}
-
-h1, h2, h3, h4, p > strong {
-  color: var(--heading);
+  font-size: 16px;
+  color: #19212e;
 }
 
 .job__board {
@@ -194,7 +190,7 @@ header .logo {
   color: white;
   text-decoration: none;
   font-family: "Kumbh Sans Bold", sans-serif;
-  font-size: 23px;
+  font-size: 26px;
   letter-spacing: .5px;
 }
 
@@ -248,9 +244,6 @@ header .toggle-container input:checked + label .toggle-ball {
 .search-bar {
   background-color: white;
   border-radius: 5px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,8 +253,12 @@ header .toggle-container input:checked + label .toggle-ball {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 60px;
-  margin-top: -30px;
+  height: 70px;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: -35px;
 }
 
 .search-bar div {
