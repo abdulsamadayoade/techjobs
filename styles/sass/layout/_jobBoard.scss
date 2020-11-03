@@ -113,4 +113,27 @@
             }
         }
     }
+
+    @include rwd(1280) {
+        column-gap: .75rem;
+    }
+
+    @include rwd(1024) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include rwd(768) {
+        grid-template-columns: 1fr;
+        &-item {
+            width: 30rem;
+            margin: 0 auto;
+        }
+    }
+
+    @include rwd(550) {
+        grid-template-columns: 1fr;
+        &-item {
+            width: 100%;
+        }
+    }
 }

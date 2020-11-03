@@ -133,4 +133,33 @@
         }
     }
 
+    @include rwd(900) {
+        h4 {font-size: 15px;}
+        .btn {width: 110px;}
+    }
+
+    @include rwd(768) {
+        grid-template-columns: repeat(1,minmax(0,1fr));
+        
+        .title-grid {
+            width: 30rem;
+            margin: 0 auto;
+        }
+
+        .by-title {
+            border-top-right-radius: .375rem;
+            border-bottom-right-radius: .375rem;
+        }
+
+        .by-location,
+        .by-time {
+            display: none;
+        }
+    }
+
+    @include rwd(550) {
+        .title-grid {
+            width: 100%;
+        }
+    }
 }

@@ -3,3 +3,9 @@
     margin: 0 auto;
     padding: 0 25px;
 }
+
+@mixin rwd($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}
