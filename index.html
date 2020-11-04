@@ -26,7 +26,7 @@
                         </label>
                     </span>
                     <span>
-                        <img src="images/icon-moon.svg" alt="light-mode">
+                        <img src="images/icon-moon.svg" alt="dark-mode">
                     </span>
                 </div>
             </nav>
@@ -34,11 +34,43 @@
     </header>
 
     <!-- SEARCH BAR SECTION-->
+    <div class="overlay"></div>
+    <div class="modal_box">
+        <div class="location-filter-m">
+            <label for="location" class="label">Location</label>
+            <div class="search-col">
+                <div class="icon-box">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
+                        <path
+                            d="M14.358 2.451A8.3 8.3 0 008.448 0a8.3 8.3 0 00-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 01-3.051-3.054 3.057 3.057 0 013.05-3.055 3.057 3.057 0 013.052 3.055 3.057 3.057 0 01-3.051 3.054z"
+                            fill="#5964E0" fill-rule="nonzero">
+                        </path>
+                    </svg>
+                </div>
+                <input type="text" id="filter" placeholder="Filter by location">
+            </div>
+        </div>
+        <div class="time-filter-m">
+            <div class="time-col">
+                <label for="custom-checkbox">
+                    <div>
+                        <input type="checkbox" id="custom-checkbox" class="checkbox" name="custom-checkbox">
+                        <span class="check-icon"></span>
+                    </div>
+                    <div>
+                        <h4>Full Time Only</h4>
+                    </div>
+                </label>
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+
     <div class="search-bar">
         <div class="title-grid">
             <label for="filter" class="label">Title</label>
             <div class="search-col by-title">
-                <div>
+                <div class="icon-box">
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
                         <path
                             d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z"
@@ -46,13 +78,29 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" id="filter" placeholder="Filter by title, companies, expertise...">
+                <input type="text" id="filter" placeholder="Filter by text...">
+                <div class="filter-mobile">
+                    <div class="funnel-icon-box" id="filter-modal">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                            <path class="fill-current"
+                                d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z"
+                                fill="#6E8098" fill-rule="nonzero"></path>
+                        </svg>
+                    </div>
+                    <div class="search-icon-box">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z"
+                                fill="#FFFFFF" fill-rule="nonzero"></path>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="location-grid">
             <label for="location" class="label">Location</label>
             <div class="search-col by-location">
-                <div>
+                <div class="icon-box">
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
                         <path
                             d="M14.358 2.451A8.3 8.3 0 008.448 0a8.3 8.3 0 00-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 01-3.051-3.054 3.057 3.057 0 013.05-3.055 3.057 3.057 0 013.052 3.055 3.057 3.057 0 01-3.051 3.054z"
@@ -414,6 +462,7 @@
             </div>
         </div>
     </section>
+    <script src="app.js"></script>
 </body>
 
 </html>
