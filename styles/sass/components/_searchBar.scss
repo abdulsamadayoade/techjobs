@@ -6,7 +6,106 @@
     display: inline-flex;
     align-items: center;
     width: 100%;
-} 
+}
+
+// MAIN
+
+main {
+    .label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .icon-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding-left: 1.5rem;
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+    }
+
+    input[type="text"] {
+        background-color: $white;
+        border-radius: .375rem;
+        font-family: inherit;
+        padding: .5rem .75rem;
+        line-height: 1.25rem;
+        font-size: .875rem;
+        width: 100%;
+        height: 100%;
+        border-width: 0;
+        padding-left: 4rem;
+        margin-right: -5rem;
+
+        &::placeholder {
+            color: $gray-dark;
+        }
+    }
+
+    .location-filter-box-m,
+    .filter-box {
+        position: relative;
+        @extend %filter-col-shared;
+    }
+
+    label.checkbox {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 15px;
+        align-items: center;
+        cursor: pointer;
+
+        input.checkbox {
+            display: none;
+        }
+
+        .check-icon {
+            position: relative;
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-color: $gray-light;
+            border-radius: 3px;
+            transition: .2s all ease-in-out;
+        }
+
+        .check-icon::before {
+            content : "\f00c";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-family: "Font Awesome 5 Free";
+            font-size: 12px;
+            font-weight: 900;
+            color: white;
+            text-align: center;
+            top: 3px;
+            transform: scale(1.5);
+            transition: .2s all ease-in-out;
+            opacity: 0;
+        }
+
+        input.checkbox:checked + .check-icon {
+            border-color: #3057d5;
+            background-color: #3057d5;
+        }
+
+        input.checkbox:checked + .check-icon::before {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
 
 // OVERLAY
 .overlay {
@@ -41,52 +140,6 @@
     z-index: 1000;
     overflow: hidden;
 
-    .label {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0,0,0,0);
-        white-space: nowrap;
-        border-width: 0;
-    }
-
-    .location-filter-box-m {
-        position: relative;
-        @extend %filter-col-shared;
-
-        input[type="text"] {
-            background-color: $white;
-            border-radius: .375rem;
-            font-family: inherit;
-            padding: .5rem .75rem;
-            line-height: 1.25rem;
-            font-size: .875rem;
-            width: 100%;
-            height: 100%;
-            border-width: 0;
-            padding-left: 4rem;
-            margin-right: -5rem;
-
-            &::placeholder {
-                color: $gray-dark;
-            }
-        }
-    }
-
-    .icon-box {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        padding-left: 1.5rem;
-        display: flex;
-        align-items: center;
-        pointer-events: none;
-    }
-
     .time-filter-box-m {
         @extend %filter-col-shared;
         height: 6rem;
@@ -98,55 +151,6 @@
 
         .btn {
             width: 100%;
-        }
-
-        label {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-gap: 15px;
-            align-items: center;
-            cursor: pointer;
-            margin-bottom: 2rem;
-
-            input.checkbox {
-                display: none;
-            }
-
-            .check-icon {
-                position: relative;
-                display: inline-block;
-                height: 20px;
-                width: 20px;
-                background-color: $gray-light;
-                border-radius: 3px;
-                transition: .2s all ease-in-out;
-            }
-
-            .check-icon::before {
-                content : "\f00c";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                font-family: "Font Awesome 5 Free";
-                font-size: 12px;
-                font-weight: 900;
-                color: white;
-                text-align: center;
-                top: 3px;
-                transform: scale(1.5);
-                transition: .2s all ease-in-out;
-                opacity: 0;
-            }
-
-            input.checkbox:checked + .check-icon {
-                border-color: #3057d5;
-                background-color: #3057d5;
-            }
-
-            input.checkbox:checked + .check-icon::before {
-                transform: scale(1);
-                opacity: 1;
-            }
         }
     }
 }
@@ -168,18 +172,6 @@
     transform: translateY(-50%);
     position: relative;
 
-    .label {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0,0,0,0);
-        white-space: nowrap;
-        border-width: 0;
-    }
-
     .filter-box--title {
         border-top-left-radius: .375rem;
         border-bottom-left-radius: .375rem;
@@ -195,96 +187,11 @@
     }
 
     .time-filter-box {
-        border-top-right-radius: .375rem;
-        border-bottom-right-radius: .375rem;
-    }
-
-    .filter-box {
-        position: relative;
-        @extend %filter-col-shared;
-
-        .icon-box {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            padding-left: 1.5rem;
-            display: flex;
-            align-items: center;
-            pointer-events: none;
-        }
-
-        input[type="text"] {
-            background-color: $white;
-            border-radius: .375rem;
-            font-family: inherit;
-            padding: .5rem .75rem;
-            line-height: 1.25rem;
-            font-size: .875rem;
-            width: 100%;
-            height: 100%;
-            border-width: 0;
-            padding-left: 4rem;
-            margin-right: -5rem;
-
-            &::placeholder {
-                color: $gray-dark;
-            }
-        }
-    }
-
-    .time-filter-box {
         @extend %filter-col-shared;
         padding-left: 1.5rem;
         justify-content: space-between;
-
-        label {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-gap: 15px;
-            align-items: center;
-            cursor: pointer;
-
-            input.checkbox {
-                display: none;
-            }
-
-            .check-icon {
-                position: relative;
-                display: inline-block;
-                height: 20px;
-                width: 20px;
-                background-color: $gray-light;
-                border-radius: 3px;
-                transition: .2s all ease-in-out;
-            }
-
-            .check-icon::before {
-                content : "\f00c";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                font-family: "Font Awesome 5 Free";
-                font-size: 12px;
-                font-weight: 900;
-                color: white;
-                text-align: center;
-                top: 3px;
-                transform: scale(1.5);
-                transition: .2s all ease-in-out;
-                opacity: 0;
-            }
-
-            input.checkbox:checked + .check-icon {
-                border-color: #3057d5;
-                background-color: #3057d5;
-            }
-
-            input.checkbox:checked + .check-icon::before {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+        border-top-right-radius: .375rem;
+        border-bottom-right-radius: .375rem;
     }
 
     @include rwd(900) {
