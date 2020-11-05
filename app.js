@@ -1,7 +1,7 @@
 // MODAL POPUP ON MOBILE DEVICES
 const overlay = document.querySelector(".overlay");
 const filter = document.getElementById("filter-modal");
-const modalBox = document.querySelector(".modal_box");
+const modalBox = document.querySelector(".modal-box");
 
 filter.addEventListener('click', function () {
     overlay.classList.add("active");
