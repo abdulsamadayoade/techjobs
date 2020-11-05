@@ -350,7 +350,7 @@ header .toggle-container input:checked + label .toggle-ball {
           transform: translateX(26px);
 }
 
-.modal-box .search-col, .modal-box .time-col, .search-bar .search-col, .search-bar .time-col {
+.modal-box .location-filter-box-m, .modal-box .time-filter-box-m, .search-grid .filter-box, .search-grid .time-filter-box {
   background-color: white;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -410,11 +410,11 @@ header .toggle-container input:checked + label .toggle-ball {
   border-width: 0;
 }
 
-.modal-box .search-col {
+.modal-box .location-filter-box-m {
   position: relative;
 }
 
-.modal-box .search-col input[type="text"] {
+.modal-box .location-filter-box-m input[type="text"] {
   background-color: white;
   border-radius: .375rem;
   font-family: inherit;
@@ -428,19 +428,19 @@ header .toggle-container input:checked + label .toggle-ball {
   margin-right: -5rem;
 }
 
-.modal-box .search-col input[type="text"]::-webkit-input-placeholder {
+.modal-box .location-filter-box-m input[type="text"]::-webkit-input-placeholder {
   color: #6d7f97;
 }
 
-.modal-box .search-col input[type="text"]:-ms-input-placeholder {
+.modal-box .location-filter-box-m input[type="text"]:-ms-input-placeholder {
   color: #6d7f97;
 }
 
-.modal-box .search-col input[type="text"]::-ms-input-placeholder {
+.modal-box .location-filter-box-m input[type="text"]::-ms-input-placeholder {
   color: #6d7f97;
 }
 
-.modal-box .search-col input[type="text"]::placeholder {
+.modal-box .location-filter-box-m input[type="text"]::placeholder {
   color: #6d7f97;
 }
 
@@ -459,7 +459,7 @@ header .toggle-container input:checked + label .toggle-ball {
   pointer-events: none;
 }
 
-.modal-box .time-col {
+.modal-box .time-filter-box-m {
   height: 6rem;
   margin-top: 2rem;
   padding: 0 1.5rem;
@@ -475,11 +475,11 @@ header .toggle-container input:checked + label .toggle-ball {
           justify-content: space-between;
 }
 
-.modal-box .time-col .btn {
+.modal-box .time-filter-box-m .btn {
   width: 100%;
 }
 
-.modal-box .time-col label {
+.modal-box .time-filter-box-m label {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
@@ -492,11 +492,11 @@ header .toggle-container input:checked + label .toggle-ball {
   margin-bottom: 2rem;
 }
 
-.modal-box .time-col label input.checkbox {
+.modal-box .time-filter-box-m label input.checkbox {
   display: none;
 }
 
-.modal-box .time-col label .check-icon {
+.modal-box .time-filter-box-m label .check-icon {
   position: relative;
   display: inline-block;
   height: 20px;
@@ -507,7 +507,7 @@ header .toggle-container input:checked + label .toggle-ball {
   transition: .2s all ease-in-out;
 }
 
-.modal-box .time-col label .check-icon::before {
+.modal-box .time-filter-box-m label .check-icon::before {
   content: "\f00c";
   position: absolute;
   width: 100%;
@@ -525,12 +525,12 @@ header .toggle-container input:checked + label .toggle-ball {
   opacity: 0;
 }
 
-.modal-box .time-col label input.checkbox:checked + .check-icon {
+.modal-box .time-filter-box-m label input.checkbox:checked + .check-icon {
   border-color: #3057d5;
   background-color: #3057d5;
 }
 
-.modal-box .time-col label input.checkbox:checked + .check-icon::before {
+.modal-box .time-filter-box-m label input.checkbox:checked + .check-icon::before {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
@@ -542,7 +542,7 @@ header .toggle-container input:checked + label .toggle-ball {
   opacity: 1;
 }
 
-.search-bar {
+.search-grid {
   max-width: 1300px;
   margin: 0 auto;
   display: -ms-grid;
@@ -558,7 +558,7 @@ header .toggle-container input:checked + label .toggle-ball {
   position: relative;
 }
 
-.search-bar .label {
+.search-grid .label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -570,30 +570,30 @@ header .toggle-container input:checked + label .toggle-ball {
   border-width: 0;
 }
 
-.search-bar .by-title {
+.search-grid .filter-box--title {
   border-top-left-radius: .375rem;
   border-bottom-left-radius: .375rem;
 }
 
-.search-bar .by-title .filter-mobile {
+.search-grid .filter-box--title .filter-mobile {
   display: none;
 }
 
-.search-bar .by-location {
+.search-grid .filter-box--location {
   border-left: 1px solid rgba(110, 128, 152, 0.2);
   border-right: 1px solid rgba(110, 128, 152, 0.2);
 }
 
-.search-bar .by-time {
+.search-grid .time-filter-box {
   border-top-right-radius: .375rem;
   border-bottom-right-radius: .375rem;
 }
 
-.search-bar .search-col {
+.search-grid .filter-box {
   position: relative;
 }
 
-.search-bar .search-col .icon-box {
+.search-grid .filter-box .icon-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -608,7 +608,7 @@ header .toggle-container input:checked + label .toggle-ball {
   pointer-events: none;
 }
 
-.search-bar .search-col input[type="text"] {
+.search-grid .filter-box input[type="text"] {
   background-color: white;
   border-radius: .375rem;
   font-family: inherit;
@@ -622,30 +622,30 @@ header .toggle-container input:checked + label .toggle-ball {
   margin-right: -5rem;
 }
 
-.search-bar .search-col input[type="text"]::-webkit-input-placeholder {
+.search-grid .filter-box input[type="text"]::-webkit-input-placeholder {
   color: #6d7f97;
 }
 
-.search-bar .search-col input[type="text"]:-ms-input-placeholder {
+.search-grid .filter-box input[type="text"]:-ms-input-placeholder {
   color: #6d7f97;
 }
 
-.search-bar .search-col input[type="text"]::-ms-input-placeholder {
+.search-grid .filter-box input[type="text"]::-ms-input-placeholder {
   color: #6d7f97;
 }
 
-.search-bar .search-col input[type="text"]::placeholder {
+.search-grid .filter-box input[type="text"]::placeholder {
   color: #6d7f97;
 }
 
-.search-bar .time-col {
+.search-grid .time-filter-box {
   padding-left: 1.5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.search-bar .time-col label {
+.search-grid .time-filter-box label {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
@@ -657,11 +657,11 @@ header .toggle-container input:checked + label .toggle-ball {
   cursor: pointer;
 }
 
-.search-bar .time-col label input.checkbox {
+.search-grid .time-filter-box label input.checkbox {
   display: none;
 }
 
-.search-bar .time-col label .check-icon {
+.search-grid .time-filter-box label .check-icon {
   position: relative;
   display: inline-block;
   height: 20px;
@@ -672,7 +672,7 @@ header .toggle-container input:checked + label .toggle-ball {
   transition: .2s all ease-in-out;
 }
 
-.search-bar .time-col label .check-icon::before {
+.search-grid .time-filter-box label .check-icon::before {
   content: "\f00c";
   position: absolute;
   width: 100%;
@@ -690,44 +690,44 @@ header .toggle-container input:checked + label .toggle-ball {
   opacity: 0;
 }
 
-.search-bar .time-col label input.checkbox:checked + .check-icon {
+.search-grid .time-filter-box label input.checkbox:checked + .check-icon {
   border-color: #3057d5;
   background-color: #3057d5;
 }
 
-.search-bar .time-col label input.checkbox:checked + .check-icon::before {
+.search-grid .time-filter-box label input.checkbox:checked + .check-icon::before {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
 }
 
 @media (max-width: 900px) {
-  .search-bar h4 {
+  .search-grid h4 {
     font-size: 15px;
   }
-  .search-bar .btn {
+  .search-grid .btn {
     width: 110px;
   }
 }
 
 @media (max-width: 768px) {
-  .search-bar {
+  .search-grid {
     -ms-grid-columns: (minmax(0, 1fr))[1];
         grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .search-bar .title-grid {
+  .search-grid .search-grid__item--title {
     width: 30rem;
     margin: 0 auto;
   }
-  .search-bar .by-location,
-  .search-bar .by-time {
+  .search-grid .filter-box--location,
+  .search-grid .time-filter-box {
     display: none;
   }
-  .search-bar .by-title {
+  .search-grid .filter-box--title {
     border-top-right-radius: .375rem;
     border-bottom-right-radius: .375rem;
   }
-  .search-bar .by-title .filter-mobile {
+  .search-grid .filter-box--title .filter-mobile {
     background-color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -738,10 +738,10 @@ header .toggle-container input:checked + label .toggle-ball {
     position: relative;
     z-index: 100;
   }
-  .search-bar .by-title .filter-mobile div {
+  .search-grid .filter-box--title .filter-mobile div {
     cursor: pointer;
   }
-  .search-bar .by-title .filter-mobile .search-icon-box {
+  .search-grid .filter-box--title .filter-mobile .search-icon-box {
     background-color: #606ad7;
     width: 3rem;
     height: 3rem;
@@ -759,7 +759,7 @@ header .toggle-container input:checked + label .toggle-ball {
 }
 
 @media (max-width: 550px) {
-  .search-bar .title-grid {
+  .search-grid .search-grid__item--title {
     width: 100%;
   }
 }

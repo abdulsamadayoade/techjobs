@@ -53,7 +53,7 @@
         border-width: 0;
     }
 
-    .search-col {
+    .location-filter-box-m {
         position: relative;
         @extend %filter-col-shared;
 
@@ -87,7 +87,7 @@
         pointer-events: none;
     }
 
-    .time-col {
+    .time-filter-box-m {
         @extend %filter-col-shared;
         height: 6rem;
         margin-top: 2rem;
@@ -158,7 +158,7 @@
 }
 
 
-.search-bar {
+.search-grid {
     max-width: 1300px;
     margin: 0 auto;
     display: grid;
@@ -180,7 +180,7 @@
         border-width: 0;
     }
 
-    .by-title {
+    .filter-box--title {
         border-top-left-radius: .375rem;
         border-bottom-left-radius: .375rem;
 
@@ -189,17 +189,17 @@
         }
     }
 
-    .by-location {
+    .filter-box--location {
         border-left: 1px solid rgba(110,128,152,0.2);
         border-right: 1px solid rgba(110,128,152,0.2);
     }
 
-    .by-time {
+    .time-filter-box {
         border-top-right-radius: .375rem;
         border-bottom-right-radius: .375rem;
     }
 
-    .search-col {
+    .filter-box {
         position: relative;
         @extend %filter-col-shared;
 
@@ -233,7 +233,7 @@
         }
     }
 
-    .time-col {
+    .time-filter-box {
         @extend %filter-col-shared;
         padding-left: 1.5rem;
         justify-content: space-between;
@@ -295,17 +295,17 @@
     @include rwd(768) {
         grid-template-columns: repeat(1,minmax(0,1fr));
         
-        .title-grid {
+        .search-grid__item--title {
             width: 30rem;
             margin: 0 auto;
         }
 
-        .by-location,
-        .by-time {
+        .filter-box--location,
+        .time-filter-box {
             display: none;
         }
 
-        .by-title {
+        .filter-box--title {
             border-top-right-radius: .375rem;
             border-bottom-right-radius: .375rem;
 
@@ -334,7 +334,7 @@
     }
 
     @include rwd(550) {
-        .title-grid {
+        .search-grid__item--title {
             width: 100%;
         }
     }

@@ -36,9 +36,9 @@
     <!-- SEARCH BAR SECTION-->
     <div class="overlay"></div>
     <div class="modal-box">
-        <div class="location-filter-m">
-            <label for="location" class="label">Location</label>
-            <div class="search-col">
+        <div class="modal-box__row">
+            <label for="location-m" class="label">Location</label>
+            <div class="location-filter-box-m">
                 <div class="icon-box">
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
                         <path
@@ -47,14 +47,14 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" id="filter1" placeholder="Filter by location">
+                <input type="text" id="location-m" placeholder="Filter by location">
             </div>
         </div>
-        <div class="time-filter-m">
-            <div class="time-col">
-                <label for="custom-checkbox">
+        <div class="modal-box__row">
+            <div class="time-filter-box-m">
+                <label for="custom-checkbox-m">
                     <div>
-                        <input type="checkbox" id="custom-checkbox" class="checkbox" name="custom-checkbox">
+                        <input type="checkbox" id="custom-checkbox-m" class="checkbox" name="custom-checkbox">
                         <span class="check-icon"></span>
                     </div>
                     <div>
@@ -66,10 +66,10 @@
         </div>
     </div>
 
-    <div class="search-bar">
-        <div class="title-grid">
-            <label for="filter" class="label">Title</label>
-            <div class="search-col by-title">
+    <div class="search-grid">
+        <div class="search-grid__item search-grid__item--title">
+            <label for="title" class="label">Title</label>
+            <div class="filter-box filter-box--title">
                 <div class="icon-box">
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
                         <path
@@ -78,7 +78,7 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" id="filter" placeholder="Filter by text...">
+                <input type="text" id="title" placeholder="Filter by text...">
                 <div class="filter-mobile">
                     <div class="funnel-icon-box" id="filter-modal">
                         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -97,9 +97,9 @@
                 </div>
             </div>
         </div>
-        <div class="location-grid">
+        <div class="search-grid__item search-grid__item--location">
             <label for="location" class="label">Location</label>
-            <div class="search-col by-location">
+            <div class="filter-box filter-box--location">
                 <div class="icon-box">
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
                         <path
@@ -108,14 +108,14 @@
                         </path>
                     </svg>
                 </div>
-                <input type="text" id="filter" placeholder="Filter by location">
+                <input type="text" id="location" placeholder="Filter by location">
             </div>
         </div>
-        <div class="time-grid">
-            <div class="time-col by-time">
-                <label for="custom-checkbox2">
+        <div class="search-grid__item search-grid__item--time">
+            <div class="time-filter-box">
+                <label for="custom-checkbox">
                     <div>
-                        <input type="checkbox" id="custom-checkbox2" class="checkbox" name="custom-checkbox">
+                        <input type="checkbox" id="custom-checkbox" class="checkbox" name="custom-checkbox">
                         <span class="check-icon"></span>
                     </div>
                     <div>
