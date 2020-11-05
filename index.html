@@ -33,435 +33,440 @@
         </div>
     </header>
 
-    <!-- SEARCH BAR SECTION-->
-    <div class="overlay"></div>
-    <div class="modal-box">
-        <div class="modal-box__row">
-            <label for="location-m" class="label">Location</label>
-            <div class="location-filter-box-m">
-                <div class="icon-box">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
-                        <path
-                            d="M14.358 2.451A8.3 8.3 0 008.448 0a8.3 8.3 0 00-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 01-3.051-3.054 3.057 3.057 0 013.05-3.055 3.057 3.057 0 013.052 3.055 3.057 3.057 0 01-3.051 3.054z"
-                            fill="#5964E0" fill-rule="nonzero">
-                        </path>
-                    </svg>
-                </div>
-                <input type="text" id="location-m" placeholder="Filter by location">
-            </div>
-        </div>
-        <div class="modal-box__row">
-            <div class="time-filter-box-m">
-                <label for="custom-checkbox-m">
-                    <div>
-                        <input type="checkbox" id="custom-checkbox-m" class="checkbox" name="custom-checkbox">
-                        <span class="check-icon"></span>
-                    </div>
-                    <div>
-                        <h4>Full Time Only</h4>
-                    </div>
-                </label>
-                <button class="btn btn-primary">Search</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="search-grid">
-        <div class="search-grid__item search-grid__item--title">
-            <label for="title" class="label">Title</label>
-            <div class="filter-box filter-box--title">
-                <div class="icon-box">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
-                        <path
-                            d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z"
-                            fill="#5964E0" fill-rule="nonzero">
-                        </path>
-                    </svg>
-                </div>
-                <input type="text" id="title" placeholder="Filter by text...">
-                <div class="filter-mobile">
-                    <div class="funnel-icon-box" id="filter-modal">
-                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                            <path class="fill-current"
-                                d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z"
-                                fill="#6E8098" fill-rule="nonzero"></path>
+    <!-- MAIN SECTION -->
+    <main>
+        <!-- SEARCH BAR SECTION-->
+        <div class="overlay"></div>
+        <div class="modal-box">
+            <div class="modal-box__row">
+                <label for="location-m" class="label">Location</label>
+                <div class="location-filter-box-m">
+                    <div class="icon-box">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
+                            <path
+                                d="M14.358 2.451A8.3 8.3 0 008.448 0a8.3 8.3 0 00-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 01-3.051-3.054 3.057 3.057 0 013.05-3.055 3.057 3.057 0 013.052 3.055 3.057 3.057 0 01-3.051 3.054z"
+                                fill="#5964E0" fill-rule="nonzero">
+                            </path>
                         </svg>
                     </div>
-                    <div class="search-icon-box">
-                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <input type="text" id="location-m" placeholder="Filter by location">
+                </div>
+            </div>
+            <div class="modal-box__row">
+                <div class="time-filter-box-m">
+                    <label for="custom-checkbox-m">
+                        <div>
+                            <input type="checkbox" id="custom-checkbox-m" class="checkbox" name="custom-checkbox">
+                            <span class="check-icon"></span>
+                        </div>
+                        <div>
+                            <h4>Full Time Only</h4>
+                        </div>
+                    </label>
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-grid">
+            <div class="search-grid__item search-grid__item--title">
+                <label for="title" class="label">Title</label>
+                <div class="filter-box filter-box--title">
+                    <div class="icon-box">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
                             <path
                                 d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z"
-                                fill="#FFFFFF" fill-rule="nonzero"></path>
+                                fill="#5964E0" fill-rule="nonzero">
+                            </path>
                         </svg>
                     </div>
+                    <input type="text" id="title" placeholder="Filter by text...">
+                    <div class="filter-mobile">
+                        <div class="funnel-icon-box" id="filter-modal">
+                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-current"
+                                    d="M19.108 0H.86a.86.86 0 00-.764.455.833.833 0 00.068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 00.248.594.865.865 0 00.942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0019.108 0z"
+                                    fill="#6E8098" fill-rule="nonzero"></path>
+                            </svg>
+                        </div>
+                        <div class="search-icon-box">
+                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z"
+                                    fill="#FFFFFF" fill-rule="nonzero"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-grid__item search-grid__item--location">
+                <label for="location" class="label">Location</label>
+                <div class="filter-box filter-box--location">
+                    <div class="icon-box">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
+                            <path
+                                d="M14.358 2.451A8.3 8.3 0 008.448 0a8.3 8.3 0 00-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 01-3.051-3.054 3.057 3.057 0 013.05-3.055 3.057 3.057 0 013.052 3.055 3.057 3.057 0 01-3.051 3.054z"
+                                fill="#5964E0" fill-rule="nonzero">
+                            </path>
+                        </svg>
+                    </div>
+                    <input type="text" id="location" placeholder="Filter by location">
+                </div>
+            </div>
+            <div class="search-grid__item search-grid__item--time">
+                <div class="time-filter-box">
+                    <label for="custom-checkbox">
+                        <div>
+                            <input type="checkbox" id="custom-checkbox" class="checkbox" name="custom-checkbox">
+                            <span class="check-icon"></span>
+                        </div>
+                        <div>
+                            <h4>Full Time Only</h4>
+                        </div>
+                    </label>
+                    <button class="btn btn-primary">Search</button>
                 </div>
             </div>
         </div>
-        <div class="search-grid__item search-grid__item--location">
-            <label for="location" class="label">Location</label>
-            <div class="filter-box filter-box--location">
-                <div class="icon-box">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="primary-color">
-                        <path
-                            d="M14.358 2.451A8.3 8.3 0 008.448 0a8.3 8.3 0 00-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 01-3.051-3.054 3.057 3.057 0 013.05-3.055 3.057 3.057 0 013.052 3.055 3.057 3.057 0 01-3.051 3.054z"
-                            fill="#5964E0" fill-rule="nonzero">
-                        </path>
-                    </svg>
-                </div>
-                <input type="text" id="location" placeholder="Filter by location">
-            </div>
-        </div>
-        <div class="search-grid__item search-grid__item--time">
-            <div class="time-filter-box">
-                <label for="custom-checkbox">
-                    <div>
-                        <input type="checkbox" id="custom-checkbox" class="checkbox" name="custom-checkbox">
-                        <span class="check-icon"></span>
-                    </div>
-                    <div>
-                        <h4>Full Time Only</h4>
-                    </div>
-                </label>
-                <button class="btn btn-primary">Search</button>
-            </div>
-        </div>
-    </div>
 
-    <!-- JOB LISTING SECTION -->
-    <section class="listing">
-        <div class="container">
-            <div class="grid">
-                <div class="grid-item">
-                    <div class="company-logo bg-1">P</div>
-                    <div class="job-time">
-                        <p class="posted">1d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
+        <!-- JOB LISTING SECTION -->
+        <section class="listing">
+            <div class="container">
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="company-logo bg-1">P</div>
+                        <div class="job-time">
+                            <p class="posted">1d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Sr. UX Engineer - Ember.js (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Paystack</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Lagos</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
                     </div>
-                    <div class="job-title">
-                        <h2>Sr. UX Engineer - Ember.js (Remote)</h2>
+                    <div class="grid-item">
+                        <div class="company-logo bg-2">T</div>
+                        <div class="job-time">
+                            <p class="posted">1d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <!-- <h2>Mobile Developer (Front End)</h2> -->
+                            <h2>Sr. UX Engineer - Ember.js (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Thrive Agric</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Enugu</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
                     </div>
-                    <div class="company-name">
-                        <p>Paystack</p>
+                    <div class="grid-item">
+                        <div class="company-logo bg-3">S</div>
+                        <div class="job-time">
+                            <p class="posted">1d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>(Senior) Python / Backend Engineer</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Sycamore</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Lagos</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
                     </div>
-                    <div class="job-location">
-                        <p>Lagos</p>
+                    <div class="grid-item">
+                        <div class="company-logo bg-4">R</div>
+                        <div class="job-time">
+                            <p class="posted">1d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Machine Learning Scientist - R&D Digital Innovation</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>RAIN Robotics</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Ibadan</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
                     </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
+                    <div class="grid-item">
+                        <div class="company-logo bg-2">B</div>
+                        <div class="job-time">
+                            <p class="posted">2d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Part Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Full Stack Developer - Laravel, Vue.Js - Remote</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>BeMo Academic Consulting Inc.</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Port Hacourt</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="company-logo bg-5">C</div>
+                        <div class="job-time">
+                            <p class="posted">2d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Part Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Sr. Software Engineer, Windows Detections (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Cryptohopper</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Abuja</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="company-logo bg-1">C</div>
+                        <div class="job-time">
+                            <p class="posted">2d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Golang Developer (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>CrowdStrike</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Kano</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="company-logo bg-6">J</div>
+                        <div class="job-time">
+                            <p class="posted">3d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Sr. Engineer - Python Dev (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Jobberman</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Abeokuta</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="company-logo bg-7">C</div>
+                        <div class="job-time">
+                            <p class="posted">3d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Sr. Rust Software Engineer (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>CowryWise</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Lagos</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="company-logo bg-5">T</div>
+                        <div class="job-time">
+                            <p class="posted">3d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Data Engineer with Python (Remote, ROU)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Techpoint Africa</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Lagos</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="company-logo bg-7">M</div>
+                        <div class="job-time">
+                            <p class="posted">3d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Sr. Cloud Workload Detection Engineer (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Microsoft Nigeria</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Port Hacourt</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="company-logo bg-8">I</div>
+                        <div class="job-time">
+                            <p class="posted">3d ago</p>
+                            <p class="dot">·</p>
+                            <p class="time">Full Time</p>
+                        </div>
+                        <div class="job-title">
+                            <h2>Sr. Software Engineer, Windows Detections (Remote)</h2>
+                        </div>
+                        <div class="company-name">
+                            <p>Interswitch Group</p>
+                        </div>
+                        <div class="job-location">
+                            <p>Lagos</p>
+                        </div>
+                        <div title="view-details" class="view-details">
+                            <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="view">View Details</span>
+                        </div>
                     </div>
                 </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-2">T</div>
-                    <div class="job-time">
-                        <p class="posted">1d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <!-- <h2>Mobile Developer (Front End)</h2> -->
-                        <h2>Sr. UX Engineer - Ember.js (Remote)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>Thrive Agric</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Enugu</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-3">S</div>
-                    <div class="job-time">
-                        <p class="posted">1d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>(Senior) Python / Backend Engineer</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>Sycamore</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Lagos</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-4">R</div>
-                    <div class="job-time">
-                        <p class="posted">1d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Machine Learning Scientist - R&D Digital Innovation</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>RAIN Robotics</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Ibadan</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-2">B</div>
-                    <div class="job-time">
-                        <p class="posted">2d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Part Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Full Stack Developer - Laravel, Vue.Js - Remote</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>BeMo Academic Consulting Inc.</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Port Hacourt</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-5">C</div>
-                    <div class="job-time">
-                        <p class="posted">2d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Part Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Sr. Software Engineer, Windows Detections (Remote)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>Cryptohopper</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Abuja</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-1">C</div>
-                    <div class="job-time">
-                        <p class="posted">2d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Golang Developer (Remote)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>CrowdStrike</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Kano</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-6">J</div>
-                    <div class="job-time">
-                        <p class="posted">3d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Sr. Engineer - Python Dev (Remote)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>Jobberman</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Abeokuta</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-7">C</div>
-                    <div class="job-time">
-                        <p class="posted">3d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Sr. Rust Software Engineer (Remote)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>CowryWise</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Lagos</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-5">T</div>
-                    <div class="job-time">
-                        <p class="posted">3d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Data Engineer with Python (Remote, ROU)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>Techpoint Africa</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Lagos</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-7">M</div>
-                    <div class="job-time">
-                        <p class="posted">3d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Sr. Cloud Workload Detection Engineer (Remote)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>Microsoft Nigeria</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Port Hacourt</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="company-logo bg-8">I</div>
-                    <div class="job-time">
-                        <p class="posted">3d ago</p>
-                        <p class="dot">·</p>
-                        <p class="time">Full Time</p>
-                    </div>
-                    <div class="job-title">
-                        <h2>Sr. Software Engineer, Windows Detections (Remote)</h2>
-                    </div>
-                    <div class="company-name">
-                        <p>Interswitch Group</p>
-                    </div>
-                    <div class="job-location">
-                        <p>Lagos</p>
-                    </div>
-                    <div title="view-details" class="view-details">
-                        <svg class="w-5 h-5 fill-current primary-color" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd"
-                                d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="view">View Details</span>
-                    </div>
+                <div class="load-more-box">
+                    <button class="btn btn-primary">Load More</button>
                 </div>
             </div>
-            <div class="load-more-box">
-                <button class="btn btn-primary">Load More</button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+
     <script src="app.js"></script>
 </body>
 
