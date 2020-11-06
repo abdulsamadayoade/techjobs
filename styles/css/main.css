@@ -699,7 +699,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .form__div {
   position: relative;
   height: 48px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .form__input {
@@ -708,6 +708,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   left: 0;
   width: 100%;
   height: 100%;
+  font-family: inherit;
   border: 1px solid #DADCE0;
   border-radius: .5rem;
   outline: none;
