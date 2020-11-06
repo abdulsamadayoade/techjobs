@@ -9,26 +9,25 @@
     <link rel="stylesheet" href="styles/css/main.css">
 </head>
 
-<body>
-    <!-- LOGIN FORM -->
-    <section class="admin-login">
-        <div class="login-box">
-            <h1>Login</h1>
-            <form>
-                <div class="input-box">
-                    <input type="text" required>
-                    <span></span>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <input type="password" required>
-                    <span></span>
-                    <label>Password</label>
-                </div>
-                <input class="btn btn-primary" type="submit" value="Login">
-            </form>
-        </div>
-    </section>
+<body style="background-color: #fff;">
+    <!-- SIGN IN FORM -->
+    <div class="login-form">
+        <form action="" class="form">
+            <h1 class="form__title">Sign In</h1>
+
+            <div class="form__div">
+                <input type="email" class="form__input" placeholder=" ">
+                <label for="" class="form__label">Email</label>
+            </div>
+
+            <div class="form__div">
+                <input type="password" class="form__input" placeholder=" ">
+                <label for="" class="form__label">Password</label>
+            </div>
+
+            <input type="submit" class="form__button" value="Sign In">
+        </form>
+    </div>
 </body>
 
 </html>
