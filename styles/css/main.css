@@ -10,6 +10,41 @@
   display: flex;
 }
 
+.grid-item .job-time, .job .job-details .job-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3rem;
+  color: #6d7f97;
+  line-height: 1.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid-item .job-time .dot, .job .job-details .dot {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid-item .job-time .time, .job .job-details .time {
+  margin-left: .75rem;
+}
+
+.grid-item .job-title h2, .job .job-details .job-post .job-title h2 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: 'Kumbh Sans Bold', sans-serif;
+}
+
+.grid-item .job-location p, .job .job-details .job-post .job-title p {
+  color: #4450d8;
+  font-family: 'Kumbh Sans Bold', sans-serif;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
 .primary-color {
   color: #606ad7;
 }
@@ -89,6 +124,10 @@ body {
   background-color: #f3f5f7;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Kumbh Sans Regular";
   src: url("../../../textfont/KumbhSans-Regular.ttf") format("truetype");
@@ -139,36 +178,8 @@ html {
           transform: translateY(-50%);
 }
 
-.grid-item .job-time {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 3rem;
-  color: #6d7f97;
-  line-height: 1.25rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.grid-item .job-time .dot {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  margin-left: 1.5rem;
-}
-
-.grid-item .job-time .time {
-  margin-left: .75rem;
-}
-
 .grid-item .job-title {
   margin-top: .75rem;
-}
-
-.grid-item .job-title h2 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: 'Kumbh Sans Bold', sans-serif;
 }
 
 .grid-item .company-name {
@@ -182,13 +193,6 @@ html {
 
 .grid-item .job-location {
   margin-top: 2.5rem;
-}
-
-.grid-item .job-location p {
-  color: #606ad7;
-  font-family: 'Kumbh Sans Bold', sans-serif;
-  font-size: .875rem;
-  line-height: 1.25rem;
 }
 
 .grid-item .view-details {
@@ -226,7 +230,7 @@ html {
   letter-spacing: .9px;
   font-size: .875rem;
   line-height: 1.25rem;
-  color: #606ad7;
+  color: #4450d8;
   margin-left: 5px;
   margin-top: 2px;
   font-family: 'Kumbh Sans Bold', sans-serif;
@@ -268,16 +272,8 @@ html {
   }
 }
 
-.load-more-box {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  padding: 10px 0;
-  margin: 30px 0;
-}
-
 header {
-  background-color: #606ad7;
+  background-color: #4450d8;
   height: 160px;
   margin-top: -30px;
 }
@@ -329,7 +325,7 @@ header .toggle-container label {
 header .toggle-container .toggle-ball {
   height: 15px;
   width: 15px;
-  background-color: #606ad7;
+  background-color: #4450d8;
   border-radius: 50%;
   position: absolute;
   top: 3px;
@@ -623,7 +619,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
     cursor: pointer;
   }
   .search-grid .filter-box--title .filter-mobile .search-icon-box {
-    background-color: #606ad7;
+    background-color: #4450d8;
     width: 3rem;
     height: 3rem;
     margin-left: 1.5rem;
@@ -649,6 +645,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   font-family: 'Kumbh Sans Bold', sans-serif;
   font-size: 15px;
   cursor: pointer;
+  display: inline-block;
   height: 45px;
   width: 130px;
   border-radius: 5px;
@@ -657,8 +654,20 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding: 0 15px;
 }
 
+.btn-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .btn-primary {
-  background-color: #606ad7;
+  background-color: #4450d8;
   color: white;
   -webkit-transition: background-color .4s ease;
   transition: background-color .4s ease;
@@ -666,6 +675,22 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 .btn-primary:hover {
   background-color: #949cf4;
+}
+
+.btn-company {
+  background-color: rgba(89, 100, 224, 0.1);
+  border-radius: .3125rem;
+  color: #4450d8;
+  width: 8.75rem;
+  height: 3rem;
+  line-height: 1.18rem;
+  font-size: 1rem;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.btn-company:hover {
+  background-color: rgba(147, 155, 244, 0.35);
 }
 
 /*===== FORM =====*/
@@ -735,7 +760,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding: .75rem 2rem;
   outline: none;
   border: none;
-  background-color: #606ad7;
+  background-color: #4450d8;
   color: white;
   font-size: 1rem;
   border-radius: .5rem;
@@ -753,7 +778,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .form__input:focus + .form__label {
   top: -.5rem;
   left: .8rem;
-  color: #606ad7;
+  color: #4450d8;
   font-size: .75rem;
   font-weight: 500;
   z-index: 10;
@@ -770,5 +795,140 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 /*Input focus*/
 .form__input:focus {
-  border: 1.5px solid #606ad7;
+  border: 1.5px solid #4450d8;
+}
+
+.load-more-box {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 10px 0;
+  margin: 30px 0;
+}
+
+.job .container-sm {
+  max-width: 49rem;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.job .company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 9rem;
+  background-color: white;
+  border-radius: .375rem;
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  overflow: hidden;
+}
+
+.job .company__logo {
+  background-color: #3db3d1;
+  color: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.job .company__logo p {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.job .company__details {
+  -webkit-box-flex: 4;
+      -ms-flex: 4 4;
+          flex: 4 4;
+  padding: 2.625rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.job .company__url {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.job .job-details {
+  background-color: white;
+  border-radius: .375rem;
+  padding: 0 1.7rem 2rem;
+}
+
+.job .job-details .job-time {
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.job .job-details .job-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.7rem;
+}
+
+.job .job-details .job-post .job-title p {
+  margin-top: .8rem;
+}
+
+.job .job-details .job-description {
+  line-height: 1.9rem;
+  color: #6d7f97;
+}
+
+.job .job-details .job-description p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.job .job-details .job-description ul {
+  padding: 0 2rem;
+}
+
+.job .job-details .job-description ul li {
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+}
+
+.job .how-to-apply {
+  background-color: #4450d8;
+  color: white;
+  border-radius: .375rem;
+  margin: 2rem 0 3.5rem;
+  padding: 3.7rem 2rem;
+}
+
+.job .how-to-apply h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "Kumbh Sans Bold", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.job .how-to-apply a {
+  color: inherit;
+  text-decoration: underline;
 }

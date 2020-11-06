@@ -1,0 +1,122 @@
+.job {
+    .container-sm {
+        max-width: 49rem;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    .company {
+        display: flex;
+        height: 9rem;
+        background-color: $white;
+        border-radius: .375rem;
+        transform: translateY(-2rem);
+        overflow: hidden;
+
+        &__logo {
+            background-color: #3db3d1;
+            color: $white;
+            flex: 1 1;
+            display: grid;
+            place-items: center;
+
+            p {
+                font-size: 4rem;
+                line-height: 1;
+            }
+        }
+
+        &__details {
+            flex: 4 4;
+            padding: 2.625rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__url {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    .job-details {
+        background-color: $white;
+        border-radius: .375rem;
+        padding: 0 1.7rem 2rem;
+        
+        .job-time {
+            @extend %job-time;
+            padding-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .dot {
+            @extend %dot;
+        }
+
+        .time {
+            @extend %time;
+        }
+
+        .job-post {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.7rem;
+
+            .job-title {
+                h2 {
+                    @extend %job-title;
+                }
+    
+                p {
+                    @extend %job-location;
+                    margin-top: .8rem;
+                }
+            }
+        }
+
+        .job-description {
+            line-height: 1.9rem;
+            color: $gray-dark;
+
+            p {
+                margin-top: 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+
+            ul {
+                padding: 0 2rem;
+
+                li {
+                    margin-top: .6rem;
+                    margin-bottom: .6rem;
+                }
+            }
+
+        }
+    }
+
+    .how-to-apply {
+        background-color: rgb(68, 80, 216);
+        color: $white;
+        border-radius: .375rem;
+        margin: 2rem 0 3.5rem;
+        padding: 3.7rem 2rem;
+
+        h2 {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-family: "Kumbh Sans Bold", sans-serif;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+    }
+}

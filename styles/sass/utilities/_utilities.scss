@@ -8,6 +8,37 @@
     display: flex;
 }
 
+%job-time {
+    display: flex;
+    padding-top: 3rem;
+    color: $gray-dark;
+    line-height: 1.25rem;
+    align-items: center;
+}
+
+%dot {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin-left: 1.5rem;
+}
+
+%time {
+    margin-left: .75rem;
+}
+
+%job-title {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-family: 'Kumbh Sans Bold', sans-serif;
+}
+
+%job-location {
+    color: $primary-color;
+    font-family: 'Kumbh Sans Bold', sans-serif;
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
 .primary-color {
     color: hsl(235, 60%, 61%);
 }

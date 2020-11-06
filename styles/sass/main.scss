@@ -1,5 +1,5 @@
-@import 'utilities/utilities';
 @import 'utilities/variables';
+@import 'utilities/utilities';
 @import 'utilities/mixins';
 
 @import 'themes/theme';
@@ -9,10 +9,10 @@
 
 @import 'layout/jobBoard';
 
-@import 'pages/home';
-
 @import 'components/header';
 @import 'components/searchBar';
 @import 'components/buttons';
 
 @import 'pages/admin';
+@import 'pages/home';
+@import 'pages/job-details';
