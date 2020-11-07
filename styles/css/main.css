@@ -1,16 +1,15 @@
-.container {
-  max-width: 1300px;
-  padding: 0 25px;
-  margin: 0 auto;
+@font-face {
+  font-family: "Kumbh Sans Regular";
+  src: url("../../../textfont/KumbhSans-Regular.ttf") format("truetype");
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@font-face {
+  font-family: "Kumbh Sans Bold";
+  src: url("../../../textfont/KumbhSans-Bold.ttf") format("truetype");
 }
 
-.grid-item .job-time, .job .job-details .job-time {
+/*===== EXTENDS AN REUSABLE CLASSES =====*/
+.grid-item .job-time, .job .job-details__time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,27 +21,39 @@
           align-items: center;
 }
 
-.grid-item .job-time .dot, .job .job-details .dot {
+.grid-item .job-time .dot, .job .job-details__time .dot {
   font-size: 2.25rem;
   line-height: 2.5rem;
   margin-left: 1.5rem;
 }
 
-.grid-item .job-time .time, .job .job-details .time {
+.grid-item .job-time .time, .job .job-details__time .time {
   margin-left: .75rem;
 }
 
-.grid-item .job-title h2, .job .job-details .job-post .job-title h2 {
+.grid-item .job-title h2, .job .job-details__post .job-title h2 {
   font-size: 1.125rem;
   line-height: 1.5rem;
-  font-family: 'Kumbh Sans Bold', sans-serif;
+  font-family: "Kumbh Sans Bold", sans-serif;
 }
 
-.grid-item .job-location p, .job .job-details .job-post .job-title p {
+.grid-item .job-location p, .job .job-details__post .job-title p {
   color: #4450d8;
-  font-family: 'Kumbh Sans Bold', sans-serif;
+  font-family: "Kumbh Sans Bold", sans-serif;
   font-size: .875rem;
   line-height: 1.25rem;
+}
+
+.container {
+  max-width: 81.25rem;
+  padding: 0 1.5625rem;
+  margin: 0 auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .primary-color {
@@ -120,6 +131,13 @@ html[data-theme="dark"] {
   outline: 0;
 }
 
+html {
+  font-family: "Kumbh Sans Regular", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  color: #19212e;
+}
+
 body {
   background-color: #f3f5f7;
 }
@@ -128,158 +146,14 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: "Kumbh Sans Regular";
-  src: url("../../../textfont/KumbhSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Kumbh Sans Bold";
-  src: url("../../../textfont/KumbhSans-Bold.ttf") format("truetype");
-}
-
-html {
-  font-family: 'Kumbh Sans Regular', sans-serif;
-  scroll-behavior: smooth;
-  font-size: 16px;
-  color: #19212e;
-}
-
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[3];
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 1rem 0;
-  gap: 4rem 2rem;
-}
-
-.grid-item {
-  background-color: white;
-  border-radius: .375rem;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  position: relative;
-  padding: 0 2rem 2rem;
-}
-
-.grid-item .company-logo {
-  border-radius: 1rem;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  font-family: 'Kumbh Sans Bold', sans-serif;
-  width: 3rem;
-  height: 3rem;
-  color: white;
-  position: absolute;
-  padding: .5rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.grid-item .job-title {
-  margin-top: .75rem;
-}
-
-.grid-item .company-name {
-  margin-top: .78rem;
-}
-
-.grid-item .company-name p {
-  color: #6d7f97;
-  line-height: 1.25rem;
-}
-
-.grid-item .job-location {
-  margin-top: 2.5rem;
-}
-
-.grid-item .view-details {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -webkit-transition: background-color .5s ease;
-  transition: background-color .5s ease;
-}
-
-.grid-item .view-details:hover {
-  background-color: #f3f5f7;
-}
-
-.grid-item .view-details .fill-current {
-  fill: currentColor;
-}
-
-.grid-item .view-details .h-5 {
-  height: 1.25rem;
-}
-
-.grid-item .view-details .w-5 {
-  width: 1.25rem;
-}
-
-.grid-item .view-details .view {
-  text-transform: uppercase;
-  letter-spacing: .9px;
-  font-size: .875rem;
-  line-height: 1.25rem;
-  color: #4450d8;
-  margin-left: 5px;
-  margin-top: 2px;
-  font-family: 'Kumbh Sans Bold', sans-serif;
-  font-weight: 600;
-}
-
-@media (max-width: 1280px) {
-  .grid {
-    -webkit-column-gap: .75rem;
-            column-gap: .75rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .grid-item {
-    width: 30rem;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 550px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .grid-item {
-    width: 100%;
-  }
-}
-
 header {
   background-color: #4450d8;
-  height: 160px;
-  margin-top: -30px;
+  height: 10rem;
+  margin-top: -1.875rem;
 }
 
 header nav {
-  height: 160px;
+  height: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,7 +169,7 @@ header .logo {
   color: white;
   text-decoration: none;
   font-family: "Kumbh Sans Bold", sans-serif;
-  font-size: 26px;
+  font-size: 1.625rem;
   letter-spacing: .5px;
 }
 
@@ -315,16 +189,16 @@ header .toggle-container label {
   background-color: white;
   display: inline-block;
   position: relative;
-  margin: 0 15px;
-  width: 46px;
-  height: 20px;
+  margin: 0 0.9375rem;
+  width: 2.875rem;
+  height: 1.25rem;
   border-radius: 50px;
   cursor: pointer;
 }
 
 header .toggle-container .toggle-ball {
-  height: 15px;
-  width: 15px;
+  height: 0.9375rem;
+  width: 0.9375rem;
   background-color: #4450d8;
   border-radius: 50%;
   position: absolute;
@@ -342,8 +216,8 @@ header .toggle-container input {
 }
 
 header .toggle-container input:checked + label .toggle-ball {
-  -webkit-transform: translateX(26px);
-          transform: translateX(26px);
+  -webkit-transform: translateX(1.625rem);
+          transform: translateX(1.625rem);
 }
 
 main .location-filter-box-m,
@@ -429,7 +303,7 @@ main label.checkbox {
   display: grid;
   -ms-grid-columns: auto 1fr;
       grid-template-columns: auto 1fr;
-  grid-gap: 15px;
+  grid-gap: 0.9375rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -443,8 +317,8 @@ main label.checkbox input.checkbox {
 main label.checkbox .check-icon {
   position: relative;
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 1.25rem;
+  width: 1.25rem;
   background-color: #f3f5f7;
   border-radius: 3px;
   -webkit-transition: .2s all ease-in-out;
@@ -457,7 +331,7 @@ main label.checkbox .check-icon::before {
   width: 100%;
   height: 100%;
   font-family: "Font Awesome 5 Free";
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 900;
   color: white;
   text-align: center;
@@ -505,7 +379,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: white;
-  height: 250px;
+  height: 15.625rem;
   opacity: 0;
   width: 0;
   border-radius: .375rem;
@@ -534,13 +408,13 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .modal-box.active {
-  width: 300px;
+  width: 18.75rem;
   max-width: 100%;
   opacity: 1;
 }
 
 .search-grid {
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -549,7 +423,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 25px;
+  padding: 0 1.5625rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   position: relative;
@@ -580,10 +454,10 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 @media (max-width: 900px) {
   .search-grid h4 {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
   .search-grid .btn {
-    width: 110px;
+    width: 6.875rem;
   }
 }
 
@@ -642,16 +516,16 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .btn {
-  font-family: 'Kumbh Sans Bold', sans-serif;
-  font-size: 15px;
+  font-family: "Kumbh Sans Bold", sans-serif;
+  font-size: 0.9375rem;
   cursor: pointer;
   display: inline-block;
-  height: 45px;
-  width: 130px;
-  border-radius: 5px;
+  height: 2.8125rem;
+  width: 8.125rem;
+  border-radius: 0.3125rem;
   border: none;
   outline: none;
-  padding: 0 15px;
+  padding: 0 0.9375rem;
 }
 
 .btn-center {
@@ -693,6 +567,141 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   background-color: rgba(147, 155, 244, 0.35);
 }
 
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 1rem 0;
+  gap: 4rem 2rem;
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: .375rem;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  position: relative;
+  padding: 0 2rem 2rem;
+}
+
+.grid-item .company-logo {
+  border-radius: 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: "Kumbh Sans Bold", sans-serif;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  position: absolute;
+  padding: .5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.grid-item .job-title {
+  margin-top: .75rem;
+}
+
+.grid-item .company-name {
+  margin-top: .78rem;
+}
+
+.grid-item .company-name p {
+  color: #6d7f97;
+  line-height: 1.25rem;
+}
+
+.grid-item .job-location {
+  margin-top: 2.5rem;
+}
+
+.grid-item .view-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+}
+
+.grid-item .view-details:hover {
+  background-color: #f3f5f7;
+}
+
+.grid-item .view-details .fill-current {
+  fill: currentColor;
+}
+
+.grid-item .view-details .h-5 {
+  height: 1.25rem;
+}
+
+.grid-item .view-details .w-5 {
+  width: 1.25rem;
+}
+
+.grid-item .view-details .view {
+  text-transform: uppercase;
+  letter-spacing: .9px;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  color: #4450d8;
+  margin-left: 5px;
+  margin-top: 2px;
+  font-family: "Kumbh Sans Bold", sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+  .grid {
+    -webkit-column-gap: .75rem;
+            column-gap: .75rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .grid-item {
+    width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .grid-item {
+    width: 100%;
+  }
+}
+
+.load-more-box {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0.625rem 0;
+  margin: 1.875rem 0;
+}
+
 /*===== FORM =====*/
 .login-form {
   display: -webkit-box;
@@ -712,8 +721,8 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   width: 22.5rem;
   padding: 4rem 2rem;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
-          box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+  -webkit-box-shadow: 0 0.625rem 1.5625rem rgba(92, 99, 105, 0.2);
+          box-shadow: 0 0.625rem 1.5625rem rgba(92, 99, 105, 0.2);
 }
 
 .form__title {
@@ -723,7 +732,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 .form__div {
   position: relative;
-  height: 48px;
+  height: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -798,18 +807,10 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   border: 1.5px solid #4450d8;
 }
 
-.load-more-box {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  padding: 10px 0;
-  margin: 30px 0;
-}
-
 .job .container-sm {
   max-width: 49rem;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 1.5625rem;
 }
 
 .job .company {
@@ -821,7 +822,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   border-radius: .375rem;
   -webkit-transform: translateY(-2rem);
           transform: translateY(-2rem);
-  overflow: hidden;
+  position: relative;
 }
 
 .job .company__logo {
@@ -833,11 +834,32 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  font-size: 4rem;
+  font-family: "Kumbh Sans Bold", sans-serif;
+  border-top-left-radius: .375rem;
+  border-bottom-left-radius: .375rem;
 }
 
 .job .company__logo p {
-  font-size: 4rem;
   line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .job .company__logo {
+    border-radius: 1rem;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 20%);
+            transform: translate(-50%, 20%);
+    font-size: 1rem;
+    height: 3rem;
+    width: 3rem;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    z-index: 10000;
+  }
 }
 
 .job .company__details {
@@ -854,16 +876,28 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Kumbh Sans Bold", sans-serif;
 }
 
-.job .company__url {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
+@media (max-width: 600px) {
+  .job .company__details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .job .company__details h2 {
+    font-size: 1.25rem;
+  }
+  .job .company__details .company__name {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .job .company {
+    height: 11rem;
+  }
 }
 
 .job .job-details {
@@ -872,12 +906,12 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding: 0 1.7rem 2rem;
 }
 
-.job .job-details .job-time {
+.job .job-details__time {
   padding-top: 2rem;
   margin-bottom: 1rem;
 }
 
-.job .job-details .job-post {
+.job .job-details__post {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -890,25 +924,50 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   margin-bottom: 1.7rem;
 }
 
-.job .job-details .job-post .job-title p {
-  margin-top: .8rem;
+.job .job-details__post .job-title {
+  padding-right: 1rem;
 }
 
-.job .job-details .job-description {
+.job .job-details__post .job-title p {
+  margin-top: .6rem;
+}
+
+@media (max-width: 600px) {
+  .job .job-details__post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .job .job-details__post .job-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .job .job-details__post .job-application, .job .job-details__post .btn {
+    width: 100%;
+  }
+}
+
+.job .job-details__description {
   line-height: 1.9rem;
   color: #6d7f97;
 }
 
-.job .job-details .job-description p {
+.job .job-details__description p {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
-.job .job-details .job-description ul {
+.job .job-details__description ul {
   padding: 0 2rem;
 }
 
-.job .job-details .job-description ul li {
+.job .job-details__description ul li {
   margin-top: .6rem;
   margin-bottom: .6rem;
 }
