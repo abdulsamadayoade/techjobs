@@ -2,7 +2,7 @@
     .container-sm {
         max-width: 49rem;
         margin: 0 auto;
-        padding: 0 25px;
+        padding: 0 1.5625rem;
     }
 
     .company {
@@ -32,12 +32,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        &__url {
-            display: flex;
-            align-items: center;
-            height: 100%;
         }
     }
 
