@@ -12,7 +12,7 @@
     width: 22.5rem;
     padding: 4rem 2rem;
     border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    box-shadow: 0 0.625rem 1.5625rem rgba(92, 99, 105, .2);
 
     &__title{
         font-weight: 400;
@@ -20,7 +20,7 @@
     }
     &__div{
         position: relative;
-        height: 48px;
+        height: 3rem;
         margin-bottom: 2rem;
     }
     &__input{

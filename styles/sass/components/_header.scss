@@ -1,10 +1,10 @@
 header {
     background-color: $primary-color;
-    height: 160px;
-    margin-top: -30px;
+    height: 10rem;
+    margin-top: -1.875rem;
 
     nav {
-        height: 160px;
+        height: 10rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -13,8 +13,8 @@ header {
     .logo {
         color: $white;
         text-decoration: none;
-        font-family: "Kumbh Sans Bold", sans-serif;
-        font-size: 26px;
+        font-family: $ff-bold;
+        font-size: 1.625rem;
         letter-spacing: .5px;
     }
 
@@ -27,16 +27,16 @@ header {
             background-color: $white;
             display: inline-block;
             position: relative;
-            margin: 0 15px;
-            width: 46px;
-            height: 20px;
+            margin: 0 0.9375rem;
+            width: 2.875rem;
+            height: 1.25rem;
             border-radius: 50px;
             cursor: pointer;
         }
 
         .toggle-ball {
-            height: 15px;
-            width: 15px;
+            height: 0.9375rem;
+            width: 0.9375rem;
             background-color: $primary-color;
             border-radius: 50%;
             position: absolute;
@@ -50,7 +50,7 @@ header {
             left: -9999px;
 
             &:checked + label .toggle-ball {
-                transform: translateX(26px);
+                transform: translateX(1.625rem);
             }
         }
     }

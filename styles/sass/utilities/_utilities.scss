@@ -21,19 +21,19 @@
 %job-title {
     font-size: 1.125rem;
     line-height: 1.5rem;
-    font-family: 'Kumbh Sans Bold', sans-serif;
+    font-family: $ff-bold;
 }
 
 %job-location {
     color: $primary-color;
-    font-family: 'Kumbh Sans Bold', sans-serif;
+    font-family: $ff-bold;
     font-size: .875rem;
     line-height: 1.25rem;
 }
 
 .container {
-    max-width: 1300px;
-    padding: 0 25px;
+    max-width: 81.25rem;
+    padding: 0 1.5625rem;
     margin: 0 auto;
 }
 

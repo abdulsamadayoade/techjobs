@@ -20,7 +20,7 @@
             display: grid;
             place-items: center;
             font-size: 4rem;
-            font-family: 'Kumbh Sans Bold', sans-serif;
+            font-family: $ff-bold;
             border-top-left-radius: .375rem;
             border-bottom-left-radius: .375rem;
 
@@ -49,7 +49,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: 'Kumbh Sans Bold', sans-serif;
+            font-family: $ff-bold;
 
             @include rwd(600) {
                 flex-direction: column;
@@ -149,7 +149,7 @@
         h2 {
             font-size: 1.25rem;
             line-height: 1.75rem;
-            font-family: "Kumbh Sans Bold", sans-serif;
+            font-family: $ff-bold;
             margin-bottom: 2rem;
         }
 

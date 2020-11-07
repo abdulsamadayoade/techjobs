@@ -8,6 +8,13 @@
     }
 }
 
+html {
+    font-family: $ff-regular;
+    scroll-behavior: smooth;
+    font-size: 16px;
+    color: $primary-color-dark;
+}
+
 body {
     background-color: $gray-light;
 }

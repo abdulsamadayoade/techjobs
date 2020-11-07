@@ -1,14 +1,14 @@
 .btn {
-    font-family: 'Kumbh Sans Bold', sans-serif;
-    font-size: 15px;
+    font-family: $ff-bold;
+    font-size: 0.9375rem;
     cursor: pointer;
     display: inline-block;
-    height: 45px;
-    width: 130px;
-    border-radius: 5px;
+    height: 2.8125rem;
+    width: 8.125rem;
+    border-radius: 0.3125rem;
     border: none;
     outline: none;
-    padding: 0 15px;
+    padding: 0 0.9375rem;
 }
 
 .btn-center {
