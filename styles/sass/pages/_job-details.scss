@@ -40,21 +40,21 @@
         border-radius: .375rem;
         padding: 0 1.7rem 2rem;
         
-        .job-time {
+        &__time {
             @extend %job-time;
             padding-top: 2rem;
             margin-bottom: 1rem;
+
+            .dot {
+                @extend %dot;
+            }
+    
+            .time {
+                @extend %time;
+            }
         }
 
-        .dot {
-            @extend %dot;
-        }
-
-        .time {
-            @extend %time;
-        }
-
-        .job-post {
+        &__post {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -72,7 +72,7 @@
             }
         }
 
-        .job-description {
+        &__description {
             line-height: 1.9rem;
             color: $gray-dark;
 
@@ -94,7 +94,7 @@
     }
 
     .how-to-apply {
-        background-color: rgb(68, 80, 216);
+        background-color: $primary-color;
         color: $white;
         border-radius: .375rem;
         margin: 2rem 0 3.5rem;
