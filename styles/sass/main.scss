@@ -1,3 +1,5 @@
+@import 'base/typography';
+
 @import 'utilities/variables';
 @import 'utilities/utilities';
 @import 'utilities/mixins';
@@ -5,14 +7,11 @@
 @import 'themes/theme';
 
 @import 'base/presets';
-@import 'base/typography';
-
-@import 'layout/jobBoard';
 
 @import 'components/header';
 @import 'components/searchBar';
 @import 'components/buttons';
 
+@import 'pages/jobBoard';
 @import 'pages/admin';
-@import 'pages/home';
 @import 'pages/job-details';
