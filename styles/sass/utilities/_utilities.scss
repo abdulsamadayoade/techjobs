@@ -1,12 +1,4 @@
-.container {
-    max-width: 1300px;
-    padding: 0 25px;
-    margin: 0 auto;
-}
-
-.row {
-    display: flex;
-}
+/*===== EXTENDS AN REUSABLE CLASSES =====*/
 
 %job-time {
     display: flex;
@@ -37,6 +29,16 @@
     font-family: 'Kumbh Sans Bold', sans-serif;
     font-size: .875rem;
     line-height: 1.25rem;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
 }
 
 .primary-color {
