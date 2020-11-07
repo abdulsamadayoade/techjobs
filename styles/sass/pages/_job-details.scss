@@ -11,7 +11,7 @@
         background-color: $white;
         border-radius: .375rem;
         transform: translateY(-2rem);
-        overflow: hidden;
+        position: relative;
 
         &__logo {
             background-color: #3db3d1;
@@ -19,10 +19,27 @@
             flex: 1 1;
             display: grid;
             place-items: center;
+            font-size: 4rem;
+            font-family: 'Kumbh Sans Bold', sans-serif;
+            border-top-left-radius: .375rem;
+            border-bottom-left-radius: .375rem;
 
             p {
-                font-size: 4rem;
                 line-height: 1;
+            }
+   
+            @include rwd(600) {
+                border-radius: 1rem;
+                position: absolute;
+                top: -20%;
+                left: 50%;
+                transform: translate(-50%, 20%);
+                font-size: 1rem;
+                height: 3rem;
+                width: 3rem;
+                display: grid;
+                place-items: center;
+                z-index: 10000;
             }
         }
 
@@ -32,6 +49,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-family: 'Kumbh Sans Bold', sans-serif;
+
+            @include rwd(600) {
+                flex-direction: column;
+
+                h2{font-size: 1.25rem;}
+
+                .company__name{margin-bottom: 1.5rem;}
+            }
+        }
+
+        @include rwd(600) {
+            height: 11rem;
         }
     }
 
@@ -61,13 +91,29 @@
             margin-bottom: 1.7rem;
 
             .job-title {
+                padding-right: 1rem;
                 h2 {
                     @extend %job-title;
                 }
     
                 p {
                     @extend %job-location;
-                    margin-top: .8rem;
+                    margin-top: .6rem;
+                }
+            }
+
+            @include rwd(600) {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .job-title {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            @include rwd(500) {
+                .job-application, .btn {
+                    width: 100%;
                 }
             }
         }
