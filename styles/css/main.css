@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Kumbh Sans Regular";
-  src: url("../../textfont/KumbhSans-Regular.ttf") format("truetype");
+  src: url("../../../textfont/KumbhSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Kumbh Sans Bold";
-  src: url("../../textfont/KumbhSans-Bold.ttf") format("truetype");
+  src: url("../../../textfont/KumbhSans-Bold.ttf") format("truetype");
 }
 
 /*===== EXTENDS AN REUSABLE CLASSES =====*/
@@ -38,7 +38,7 @@
 }
 
 .grid-item .job-location p, .job .job-details__post .job-title p {
-  color: #4450d8;
+  color: #5762e0;
   font-family: "Kumbh Sans Bold", sans-serif;
   font-size: .875rem;
   line-height: 1.25rem;
@@ -57,7 +57,7 @@
 }
 
 .primary-color {
-  color: #606ad7;
+  color: #5762e0;
 }
 
 .bg-1 {
@@ -147,7 +147,7 @@ a {
 }
 
 header {
-  background-color: #4450d8;
+  background-color: #5762e0;
   height: 10rem;
   margin-top: -1.875rem;
 }
@@ -199,7 +199,7 @@ header .toggle-container label {
 header .toggle-container .toggle-ball {
   height: 0.9375rem;
   width: 0.9375rem;
-  background-color: #4450d8;
+  background-color: #5762e0;
   border-radius: 50%;
   position: absolute;
   top: 3px;
@@ -344,8 +344,8 @@ main label.checkbox .check-icon::before {
 }
 
 main label.checkbox input.checkbox:checked + .check-icon {
-  border-color: #3057d5;
-  background-color: #3057d5;
+  border-color: #5762e0;
+  background-color: #5762e0;
 }
 
 main label.checkbox input.checkbox:checked + .check-icon::before {
@@ -493,7 +493,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
     cursor: pointer;
   }
   .search-grid .filter-box--title .filter-mobile .search-icon-box {
-    background-color: #4450d8;
+    background-color: #5762e0;
     width: 3rem;
     height: 3rem;
     margin-left: 1.5rem;
@@ -541,7 +541,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .btn-primary {
-  background-color: #4450d8;
+  background-color: #5762e0;
   color: white;
   -webkit-transition: background-color .4s ease;
   transition: background-color .4s ease;
@@ -554,7 +554,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .btn-company {
   background-color: rgba(89, 100, 224, 0.1);
   border-radius: .3125rem;
-  color: #4450d8;
+  color: #5762e0;
   width: 8.75rem;
   height: 3rem;
   line-height: 1.18rem;
@@ -652,7 +652,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   letter-spacing: .9px;
   font-size: .875rem;
   line-height: 1.25rem;
-  color: #4450d8;
+  color: #5762e0;
   margin-left: 5px;
   margin-top: 2px;
   font-family: "Kumbh Sans Bold", sans-serif;
@@ -769,7 +769,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding: .75rem 2rem;
   outline: none;
   border: none;
-  background-color: #4450d8;
+  background-color: #5762e0;
   color: white;
   font-size: 1rem;
   border-radius: .5rem;
@@ -787,7 +787,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .form__input:focus + .form__label {
   top: -.5rem;
   left: .8rem;
-  color: #4450d8;
+  color: #5762e0;
   font-size: .75rem;
   font-weight: 500;
   z-index: 10;
@@ -804,7 +804,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 /*Input focus*/
 .form__input:focus {
-  border: 1.5px solid #4450d8;
+  border: 1.5px solid #5762e0;
 }
 
 .job .container-sm {
@@ -973,7 +973,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .job .how-to-apply {
-  background-color: #4450d8;
+  background-color: #5762e0;
   color: white;
   border-radius: .375rem;
   margin: 2rem 0 3.5rem;
