@@ -5,7 +5,7 @@
     gap: 4rem 2rem;
 
     &-item {
-        background-color: $white;
+        background-color: var(--base-bg);
         border-radius: .375rem;
         box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
         position: relative;
@@ -15,10 +15,10 @@
             border-radius: 1rem;
             display: grid;
             place-items: center;
-            font-family: $ff-bold;
+            font-family: var(--ff-bold);
             width: 3rem;
             height: 3rem;
-            color: $white;
+            color: var(--white);
             position: absolute;
             padding: .5rem;
             transform: translateY(-50%);
@@ -42,6 +42,7 @@
 
             h2 {
                 @extend %job-title;
+                color: var(--heading-color);
     
             }
         }
@@ -50,7 +51,7 @@
             margin-top: .78rem;
 
             p {
-                color: $gray-dark;
+                color: var(--gray-dark);
                 line-height: 1.25rem;
             }
         }
@@ -74,7 +75,7 @@
             transition: background-color .5s ease;
 
             &:hover {
-                background-color: $gray-light;
+                background-color: var(--gray-light);
             }
             
             .fill-current {
@@ -94,10 +95,10 @@
                 letter-spacing: .9px;
                 font-size: .875rem;
                 line-height: 1.25rem;
-                color: $primary-color;
+                color: var(--primary-color);
                 margin-left: 5px;
                 margin-top: 2px;
-                font-family: $ff-bold;
+                font-family: var(--ff-bold);
                 font-weight: 600;
             }
         }

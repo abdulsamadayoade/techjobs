@@ -1,5 +1,5 @@
 .btn {
-    font-family: $ff-bold;
+    font-family: var(--ff-bold);
     font-size: 0.9375rem;
     cursor: pointer;
     display: inline-block;
@@ -18,19 +18,19 @@
 }
 
 .btn-primary {
-    background-color: $primary-color;
-    color: $white;
+    background-color: var(--primary-color);
+    color: var(--white);
     transition: background-color .4s ease;
 
     &:hover {
-        background-color: $primary-color-light;
+        background-color: var(--primary-color-light);
     }
 }
 
 .btn-company {
-    background-color: $company-btn-bg;
+    background-color: var(--company-btn-bg);
     border-radius: .3125rem;
-    color: $primary-color;
+    color: var(--company-btn-color);
     width: 8.75rem;
     height: 3rem;
     line-height: 1.18rem;
@@ -38,6 +38,6 @@
     transition: background-color .3s;
 
     &:hover {
-        background-color: $company-btn-bg-hover;
+        background-color: var(--company-btn-bg-hover);
     }
 }

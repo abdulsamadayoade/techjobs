@@ -1,11 +1,32 @@
 @font-face {
   font-family: "Kumbh Sans Regular";
-  src: url("../../textfont/KumbhSans-Regular.ttf") format("truetype");
+  src: url("../../../textfont/KumbhSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Kumbh Sans Bold";
-  src: url("../../textfont/KumbhSans-Bold.ttf") format("truetype");
+  src: url("../../../textfont/KumbhSans-Bold.ttf") format("truetype");
+}
+
+:root {
+  --bg-color: hsl(210, 22%, 96%);
+  --base-bg: hsl(0, 0%, 100%);
+  --input-color: hsl(219, 29%, 14%);
+  --checkbox-bg: hsl(210, 22%, 96%);
+  --heading-color: hsl(219, 29%, 14%);
+  --primary-color: hsl(235, 69%, 61%);
+  --primary-color-light: hsl(235, 82%, 77%);
+  --primary-color-dark: hsl(219, 29%, 14%);
+  --midnight: hsl(220, 29%, 10%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(212, 23%, 69%);
+  --gray-light: hsl(210, 22%, 96%);
+  --gray-dark: hsl(214, 17%, 51%);
+  --company-btn-color: hsl(235, 69%, 61%);
+  --company-btn-bg: rgba(89, 100, 224, 0.1);
+  --company-btn-bg-hover: rgba(147, 155, 244, 0.35);
+  --ff-bold: "Kumbh Sans Bold", sans-serif;
+  --ff-regular: "Kumbh Sans Regular", sans-serif;
 }
 
 /*===== EXTENDS AN REUSABLE CLASSES =====*/
@@ -14,7 +35,7 @@
   display: -ms-flexbox;
   display: flex;
   padding-top: 3rem;
-  color: #6d7f97;
+  color: var(--gray-dark);
   line-height: 1.25rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -34,12 +55,12 @@
 .grid-item .job-title h2, .job .job-details__post .job-title h2 {
   font-size: 1.125rem;
   line-height: 1.5rem;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
 }
 
 .grid-item .job-location p, .job .job-details__post .job-title p {
-  color: #5762e0;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  color: var(--primary-color);
+  font-family: var(--ff-bold);
   font-size: .875rem;
   line-height: 1.25rem;
 }
@@ -57,7 +78,7 @@
 }
 
 .primary-color {
-  color: #5762e0;
+  color: var(--primary-color);
 }
 
 .bg-1 {
@@ -92,32 +113,13 @@
   background-color: #ff585f;
 }
 
-html[data-theme="light"] {
-  --bg: var(--gray--light);
-  --main-base: var(--white);
-  --heading: var(--blue--dark);
-  --text--main: var(--gray--dark);
-  --company-site-btn: var(--violet);
-  --border: var(--white);
-  --spinner: black;
-  --back-to-top: hsla(219, 29%, 14%, .8);
-  --error: hsla(0, 100%, 50%, .8);
-  --shadowColor: 0, 0, 0, 0.3;
-  --box-shadow: 5px 5px 15px 0 rgba(var(--shadowColor));
-}
-
-html[data-theme="dark"] {
-  --bg: var(--midnight);
-  --main-base: var(--blue--dark);
-  --heading: var(--white);
-  --text--main: var(--gray--dark);
-  --company-site-btn: var(--white);
-  --border: var(--midnight);
-  --spinner: var(--violet);
-  --back-to-top: var(--violet);
-  --error: hsla(0, 100%, 50%, .4);
-  --shadowColor: 0, 0, 0, 1;
-  --box-shadow: 5px 5px 15px 0 rgba(var(--shadowColor));
+body[data-theme="dark"] {
+  --bg-color: hsl(220, 29%, 10%);
+  --base-bg:  hsl(219, 29%, 14%);
+  --input-color: hsl(0, 0%, 100%);
+  --checkbox-bg: hsla(0, 0%, 100%, 0.1);
+  --heading-color: hsl(0, 0%, 100%);
+  --company-btn-color: hsl(0, 0%, 100%);
 }
 
 * {
@@ -132,14 +134,14 @@ html[data-theme="dark"] {
 }
 
 html {
-  font-family: "Kumbh Sans Regular", sans-serif;
+  font-family: var(--ff-regular);
   scroll-behavior: smooth;
   font-size: 16px;
-  color: #19212e;
+  color: var(--primary-color-dark);
 }
 
 body {
-  background-color: #f3f5f7;
+  background-color: var(--bg-color);
 }
 
 a {
@@ -147,7 +149,7 @@ a {
 }
 
 header {
-  background-color: #5762e0;
+  background-color: var(--primary-color);
   height: 10rem;
   margin-top: -1.875rem;
 }
@@ -166,9 +168,9 @@ header nav {
 }
 
 header .logo {
-  color: white;
+  color: var(--white);
   text-decoration: none;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
   font-size: 1.625rem;
   letter-spacing: .5px;
 }
@@ -186,7 +188,7 @@ header .toggle-container {
 }
 
 header .toggle-container label {
-  background-color: white;
+  background-color: var(--white);
   display: inline-block;
   position: relative;
   margin: 0 0.9375rem;
@@ -199,7 +201,7 @@ header .toggle-container label {
 header .toggle-container .toggle-ball {
   height: 0.9375rem;
   width: 0.9375rem;
-  background-color: #5762e0;
+  background-color: var(--primary-color);
   border-radius: 50%;
   position: absolute;
   top: 3px;
@@ -222,7 +224,7 @@ header .toggle-container input:checked + label .toggle-ball {
 
 main .location-filter-box-m,
 main .filter-box, .modal-box .time-filter-box-m, .search-grid .time-filter-box {
-  background-color: white;
+  background-color: var(--base-bg);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   padding-right: 1rem;
@@ -264,7 +266,8 @@ main .icon-box {
 }
 
 main input[type="text"] {
-  background-color: white;
+  background-color: var(--base-bg);
+  color: var(--input-color);
   border-radius: .375rem;
   font-family: inherit;
   padding: .5rem .75rem;
@@ -278,19 +281,19 @@ main input[type="text"] {
 }
 
 main input[type="text"]::-webkit-input-placeholder {
-  color: #6d7f97;
+  color: var(--gray-dark);
 }
 
 main input[type="text"]:-ms-input-placeholder {
-  color: #6d7f97;
+  color: var(--gray-dark);
 }
 
 main input[type="text"]::-ms-input-placeholder {
-  color: #6d7f97;
+  color: var(--gray-dark);
 }
 
 main input[type="text"]::placeholder {
-  color: #6d7f97;
+  color: var(--gray-dark);
 }
 
 main .location-filter-box-m,
@@ -310,6 +313,10 @@ main label.checkbox {
   cursor: pointer;
 }
 
+main label.checkbox h4 {
+  color: var(--input-color);
+}
+
 main label.checkbox input.checkbox {
   display: none;
 }
@@ -319,7 +326,7 @@ main label.checkbox .check-icon {
   display: inline-block;
   height: 1.25rem;
   width: 1.25rem;
-  background-color: #f3f5f7;
+  background-color: var(--checkbox-bg);
   border-radius: 3px;
   -webkit-transition: .2s all ease-in-out;
   transition: .2s all ease-in-out;
@@ -333,7 +340,7 @@ main label.checkbox .check-icon::before {
   font-family: "Font Awesome 5 Free";
   font-size: 0.75rem;
   font-weight: 900;
-  color: white;
+  color: var(--white);
   text-align: center;
   top: 3px;
   -webkit-transform: scale(1.5);
@@ -344,8 +351,8 @@ main label.checkbox .check-icon::before {
 }
 
 main label.checkbox input.checkbox:checked + .check-icon {
-  border-color: #5762e0;
-  background-color: #5762e0;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 main label.checkbox input.checkbox:checked + .check-icon::before {
@@ -378,7 +385,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: var(--base-bg);
   height: 15.625rem;
   opacity: 0;
   width: 0;
@@ -479,7 +486,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
     border-bottom-right-radius: .375rem;
   }
   .search-grid .filter-box--title .filter-mobile {
-    background-color: white;
+    background-color: var(--base-bg);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -493,7 +500,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
     cursor: pointer;
   }
   .search-grid .filter-box--title .filter-mobile .search-icon-box {
-    background-color: #5762e0;
+    background-color: var(--primary-color);
     width: 3rem;
     height: 3rem;
     margin-left: 1.5rem;
@@ -516,7 +523,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .btn {
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
   font-size: 0.9375rem;
   cursor: pointer;
   display: inline-block;
@@ -541,20 +548,20 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .btn-primary {
-  background-color: #5762e0;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
   -webkit-transition: background-color .4s ease;
   transition: background-color .4s ease;
 }
 
 .btn-primary:hover {
-  background-color: #949cf4;
+  background-color: var(--primary-color-light);
 }
 
 .btn-company {
-  background-color: rgba(89, 100, 224, 0.1);
+  background-color: var(--company-btn-bg);
   border-radius: .3125rem;
-  color: #5762e0;
+  color: var(--company-btn-color);
   width: 8.75rem;
   height: 3rem;
   line-height: 1.18rem;
@@ -564,7 +571,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .btn-company:hover {
-  background-color: rgba(147, 155, 244, 0.35);
+  background-color: var(--company-btn-bg-hover);
 }
 
 .grid {
@@ -577,7 +584,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .grid-item {
-  background-color: white;
+  background-color: var(--base-bg);
   border-radius: .375rem;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -590,10 +597,10 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
   width: 3rem;
   height: 3rem;
-  color: white;
+  color: var(--white);
   position: absolute;
   padding: .5rem;
   -webkit-transform: translateY(-50%);
@@ -604,12 +611,16 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   margin-top: .75rem;
 }
 
+.grid-item .job-title h2 {
+  color: var(--heading-color);
+}
+
 .grid-item .company-name {
   margin-top: .78rem;
 }
 
 .grid-item .company-name p {
-  color: #6d7f97;
+  color: var(--gray-dark);
   line-height: 1.25rem;
 }
 
@@ -632,7 +643,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .grid-item .view-details:hover {
-  background-color: #f3f5f7;
+  background-color: var(--gray-light);
 }
 
 .grid-item .view-details .fill-current {
@@ -652,10 +663,10 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   letter-spacing: .9px;
   font-size: .875rem;
   line-height: 1.25rem;
-  color: #5762e0;
+  color: var(--primary-color);
   margin-left: 5px;
   margin-top: 2px;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
   font-weight: 600;
 }
 
@@ -756,7 +767,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   left: 1rem;
   top: 1rem;
   padding: 0 .25rem;
-  background-color: white;
+  background-color: var(--white);
   color: #80868B;
   font-size: 1rem;
   -webkit-transition: .3s;
@@ -769,8 +780,8 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding: .75rem 2rem;
   outline: none;
   border: none;
-  background-color: #5762e0;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
   font-size: 1rem;
   border-radius: .5rem;
   cursor: pointer;
@@ -787,7 +798,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .form__input:focus + .form__label {
   top: -.5rem;
   left: .8rem;
-  color: #5762e0;
+  color: var(--primary-color);
   font-size: .75rem;
   font-weight: 500;
   z-index: 10;
@@ -804,7 +815,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 /*Input focus*/
 .form__input:focus {
-  border: 1.5px solid #5762e0;
+  border: 1.5px solid var(--primary-color);
 }
 
 .job .container-sm {
@@ -818,7 +829,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   display: -ms-flexbox;
   display: flex;
   height: 9rem;
-  background-color: white;
+  background-color: var(--base-bg);
   border-radius: .375rem;
   -webkit-transform: translateY(-2rem);
           transform: translateY(-2rem);
@@ -827,7 +838,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 .job .company__logo {
   background-color: #3db3d1;
-  color: white;
+  color: var(--white);
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
@@ -835,7 +846,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   display: grid;
   place-items: center;
   font-size: 4rem;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
   border-top-left-radius: .375rem;
   border-bottom-left-radius: .375rem;
 }
@@ -876,7 +887,8 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
+  color: var(--heading-color);
 }
 
 @media (max-width: 600px) {
@@ -901,7 +913,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .job .job-details {
-  background-color: white;
+  background-color: var(--base-bg);
   border-radius: .375rem;
   padding: 0 1.7rem 2rem;
 }
@@ -926,6 +938,10 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 .job .job-details__post .job-title {
   padding-right: 1rem;
+}
+
+.job .job-details__post .job-title h2 {
+  color: var(--heading-color);
 }
 
 .job .job-details__post .job-title p {
@@ -955,7 +971,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 
 .job .job-details__description {
   line-height: 1.9rem;
-  color: #6d7f97;
+  color: var(--gray-dark);
 }
 
 .job .job-details__description p {
@@ -973,8 +989,8 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .job .how-to-apply {
-  background-color: #5762e0;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
   border-radius: .375rem;
   margin: 2rem 0 3.5rem;
   padding: 3.7rem 2rem;
@@ -983,7 +999,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .job .how-to-apply h2 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-family: "Kumbh Sans Bold", sans-serif;
+  font-family: var(--ff-bold);
   margin-bottom: 2rem;
 }
 

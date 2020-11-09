@@ -9,14 +9,14 @@
 }
 
 html {
-    font-family: $ff-regular;
+    font-family: var(--ff-regular);
     scroll-behavior: smooth;
     font-size: 16px;
-    color: $primary-color-dark;
+    color: var(--primary-color-dark);
 }
 
 body {
-    background-color: $gray-light;
+    background-color: var(--bg-color);
 }
 
 a {

@@ -3,7 +3,7 @@
 %job-time {
     display: flex;
     padding-top: 3rem;
-    color: $gray-dark;
+    color: var(--gray-dark);
     line-height: 1.25rem;
     align-items: center;
 }
@@ -21,12 +21,12 @@
 %job-title {
     font-size: 1.125rem;
     line-height: 1.5rem;
-    font-family: $ff-bold;
+    font-family: var(--ff-bold);
 }
 
 %job-location {
-    color: $primary-color;
-    font-family: $ff-bold;
+    color: var(--primary-color);
+    font-family: var(--ff-bold);
     font-size: .875rem;
     line-height: 1.25rem;
 }
@@ -42,7 +42,7 @@
 }
 
 .primary-color {
-    color: $primary-color;
+    color: var(--primary-color);
 }
 
 .bg-1 {background-color: #3db3d1;}

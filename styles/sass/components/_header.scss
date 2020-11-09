@@ -1,5 +1,5 @@
 header {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     height: 10rem;
     margin-top: -1.875rem;
 
@@ -11,9 +11,9 @@ header {
     }
 
     .logo {
-        color: $white;
+        color: var(--white);
         text-decoration: none;
-        font-family: $ff-bold;
+        font-family: var(--ff-bold);
         font-size: 1.625rem;
         letter-spacing: .5px;
     }
@@ -24,7 +24,7 @@ header {
         justify-content: center;
 
         label {
-            background-color: $white;
+            background-color: var(--white);
             display: inline-block;
             position: relative;
             margin: 0 0.9375rem;
@@ -37,7 +37,7 @@ header {
         .toggle-ball {
             height: 0.9375rem;
             width: 0.9375rem;
-            background-color: $primary-color;
+            background-color: var(--primary-color);
             border-radius: 50%;
             position: absolute;
             top: 3px;

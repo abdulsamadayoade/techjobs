@@ -1,27 +1,19 @@
-html[data-theme="light"] {
-    --bg: var(--gray--light);
-    --main-base: var(--white);
-    --heading: var(--blue--dark);
-    --text--main: var(--gray--dark);
-    --company-site-btn: var(--violet);
-    --border: var(--white);
-    --spinner: black;
-    --back-to-top: hsla(219, 29%, 14%, .8);
-    --error: hsla(0, 100%, 50%, .8);
-    --shadowColor: 0, 0, 0, 0.3;
-    --box-shadow: 5px 5px 15px 0 rgba(var(--shadowColor));
+body[data-theme="light"] {
+    // --bg-color: hsl(210, 22%, 96%);
+    // --base-bg: hsl(0, 0%, 100%);
+    // --input-color: hsl(219, 29%, 14%);
+    // --checkbox-bg: hsl(210, 22%, 96%);
+    // --heading-color: hsl(219, 29%, 14%);
+    // --company-btn-color: hsl(235, 69%, 61%);
+
 }
 
-html[data-theme="dark"] {
-    --bg: var(--midnight);
-    --main-base: var(--blue--dark);
-    --heading: var(--white);
-    --text--main: var(--gray--dark);
-    --company-site-btn: var(--white);
-    --border: var(--midnight);
-    --spinner: var(--violet);
-    --back-to-top: var(--violet);
-    --error: hsla(0, 100%, 50%, .4);
-    --shadowColor: 0, 0, 0, 1;
-    --box-shadow: 5px 5px 15px 0 rgba(var(--shadowColor));
+
+body[data-theme="dark"] {
+    --bg-color: hsl(220, 29%, 10%);
+    --base-bg:  hsl(219, 29%, 14%);
+    --input-color: hsl(0, 0%, 100%);
+    --checkbox-bg: hsla(0, 0%, 100%, 0.1);
+    --heading-color: hsl(0, 0%, 100%);
+    --company-btn-color: hsl(0, 0%, 100%);
 }
