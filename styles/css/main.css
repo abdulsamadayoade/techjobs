@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Kumbh Sans Regular";
-  src: url("../../textfont/KumbhSans-Regular.ttf") format("truetype");
+  src: url("../../../textfont/KumbhSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Kumbh Sans Bold";
-  src: url("../../textfont/KumbhSans-Bold.ttf") format("truetype");
+  src: url("../../../textfont/KumbhSans-Bold.ttf") format("truetype");
 }
 
 :root {
@@ -67,7 +67,7 @@
 
 .container {
   max-width: 84rem;
-  padding: 0 1.5625rem;
+  padding: 0 1.2rem;
   margin: 0 auto;
 }
 
@@ -430,7 +430,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 1.5625rem;
+  padding: 0 1.2rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   position: relative;
@@ -821,7 +821,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .job .container-sm {
   max-width: 49rem;
   margin: 0 auto;
-  padding: 0 1.5625rem;
+  padding: 0 1.2rem;
 }
 
 .job .company {
@@ -915,7 +915,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 .job .job-details {
   background-color: var(--base-bg);
   border-radius: .375rem;
-  padding: 0 1.7rem 2rem;
+  padding: 0 1.4rem 2rem;
 }
 
 .job .job-details__time {
