@@ -13,7 +13,7 @@ router.route('/').post(registerUser).get(protect, admin, getUsers)
 router.post('/login', authUser);
 router
 	.route('/profile')
-	.get(protect, getUserProfile)
-	.put(protect, updateUserProfile);
+	.get(protect, admin, getUserProfile)
+	.put(protect, admin,  updateUserProfile);
 
 export default router;

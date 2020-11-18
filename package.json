@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "data:import": "node backend/utils/seeder",
+    "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d"
   },
   "repository": {
