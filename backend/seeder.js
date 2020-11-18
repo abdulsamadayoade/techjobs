@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import colors from 'colors';
-//import users from './data/users.js'
-import posts from '../data/post.js'
-//import User from './models/userModel.js';
-import Post from "../models/postModels.js"
-import connectDB from '../config/db.js';
+import users from './data/users.js'
+import posts from './data/posts.js'
+import User from './models/userModel.js';
+import Post from './models/postModels.js';
+import connectDB from './config/db.js';
 
 dotenv.config();
 
@@ -13,14 +13,20 @@ connectDB();
 
 const importData = async () => {
 	try {
-		//await User.deleteMany();
 		await Post.deleteMany();
+		await User.deleteMany();
 
-		//const createdUser = await User.insertMany(users);
-		const createdPost = await Post.insertMany(posts);
+		const createdUser = await User.insertMany(users);
 
+		const adminUser = createdUser[0]._id;
 
-		console.log('data inported'.green.inverse)
+		const samplePosts = posts.map((posts) => {
+			return { ...posts, user: adminUser }
+		});
+
+		await Post.insertMany(samplePosts)
+
+		console.log('data imported'.green.inverse)
 		process.exit(0);
 	} catch (error) {
 		console.error(`${error.message}`.red.inverse);
@@ -30,8 +36,8 @@ const importData = async () => {
 
 const destroyData = async () => {
 	try {
-		//await User.deleteMany();
 		await Post.deleteMany();
+		await User.deleteMany();
 		console.log('data destroyed'.red.inverse);
 		process.exit(0);
 	} catch (error) {
@@ -47,5 +53,3 @@ if(process.argv[2] === '-d') {
 } else {
     importData()
 }
-
-

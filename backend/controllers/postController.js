@@ -23,4 +23,44 @@ const getPostById = asyncHandler(async (req, res) => {
 	}
 });
 
-export { getPosts, getPostById };
+
+const addPosts = asyncHandler(async (req, res) => {
+	const { 
+		jobTitle,
+		compayName,
+		companyLogo,
+		companyWebsite,
+		location,
+		jobType,
+        modeOfExecution,
+		aboutUs,
+		theRole,
+		youAre,
+		jobRequirements,
+		niceToHave,
+		benefits,
+		ourValues,
+		howToApply
+	} = req.body
+
+	if(jobTitle ||
+		compayName ||
+		companyLogo ||
+		companyWebsite ||
+		location ||
+		jobType ||
+        modeOfExecution ||
+		aboutUs ||
+		theRole ||
+		youAre ||
+		jobRequirements ||
+		niceToHave ||
+		benefits ||
+		ourValues ||
+		howToApply) {
+			throw new Error('Fill all fields')
+		}
+
+})
+
+export { getPosts, getPostById , addPosts};

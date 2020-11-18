@@ -16,7 +16,7 @@ const postSchema = mongoose.Schema(
 		},
 		durationFromDataPosted: {
 			type: Date,
-            default: Date.now
+            default: Date.now()
 		},
 		companyWebsite: {
 			type: String,

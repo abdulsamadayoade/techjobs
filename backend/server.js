@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDb from './config/db.js';
 import colors from 'colors';
-//import userRoutes from './routes/userRoutes.js'
+import userRoutes from './routes/usersRoute.js'
 import postRoutes from './routes/postRoutes.js'
 import {notFound, errorHandler } from './middleware/errorMiddleware.js'
 import morgan from 'morgan'
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(`/api/posts`, postRoutes)
-//app.use(`/api/users`, userRoutes)
+app.use(`/api/users`, userRoutes)
 
 app.use(notFound)
 app.use(errorHandler)
