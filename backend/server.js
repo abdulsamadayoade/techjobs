@@ -6,6 +6,7 @@ import userRoutes from './routes/usersRoute.js'
 import postRoutes from './routes/postRoutes.js'
 import {notFound, errorHandler } from './middleware/errorMiddleware.js'
 import morgan from 'morgan'
+import mongoSanitize from 'express-mongo-sanitize';
 
 
 
@@ -27,6 +28,8 @@ app.use(`/api/users`, userRoutes)
 app.use(notFound)
 app.use(errorHandler)
 app.use(morgan('tiny'))
+app.use(mongoSanitize())
+
 
 const PORT = process.env.PORT || 5003;
 

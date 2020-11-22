@@ -136,7 +136,7 @@ const deletePosts = asyncHandler(async (req, res) => {
 	const post = await Post.findById(req.params.id);
 	if (post) {
 		await post.remove()
-		res.status(200).json(post);
+		res.status(200).json({message : "Post Deleted"});
 	} else {
 		res.status(404);
 		throw new Error('Post Not Found');
