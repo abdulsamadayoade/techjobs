@@ -1,11 +1,11 @@
-import asyncHandler from 'express-async-handler';
-import Post from './../models/postModels.js';
+const  asyncHandler= require('express-async-handler');
+const  Post= require('./../models/postModels.js');
 
 // @desc      Fetch All Posts
 // @route     GET /api/posts
 // @access    Public
 
-const getPosts = asyncHandler(async (req, res) => {
+exports.getPosts = asyncHandler(async (req, res) => {
 	const posts = await Post.find({});
 	res.status(200).json(posts);
 });
@@ -13,7 +13,7 @@ const getPosts = asyncHandler(async (req, res) => {
 // @desc      Fetch one Post
 // @route     GET /api/posts/:id
 // @access    Public
-const getPostById = asyncHandler(async (req, res) => {
+exports.getPostById = asyncHandler(async (req, res) => {
 	const post = await Post.findById(req.params.id);
 	if (post) {
 		res.status(200).json(post);
@@ -23,7 +23,7 @@ const getPostById = asyncHandler(async (req, res) => {
 	}
 });
 
-const addPosts = asyncHandler(async (req, res) => {
+exports.addPosts = asyncHandler(async (req, res) => {
 	const {
 		jobTitle,
 		companyName,
@@ -81,7 +81,7 @@ const addPosts = asyncHandler(async (req, res) => {
 // @desc      Update posts
 // @route     PUT /api/users/posts
 // @access    Private
-const updatePosts = asyncHandler(async (req, res) => {
+exports.updatePosts = asyncHandler(async (req, res) => {
 	const post = await Post.findById(req.params.id);
 
 	if (post) {
@@ -132,7 +132,7 @@ const updatePosts = asyncHandler(async (req, res) => {
 // @desc      Delete Post
 // @route     DELETE /api/posts/
 // @access    Private
-const deletePosts = asyncHandler(async (req, res) => {
+exports.deletePosts = asyncHandler(async (req, res) => {
 	const post = await Post.findById(req.params.id);
 	if (post) {
 		await post.remove()
@@ -144,4 +144,3 @@ const deletePosts = asyncHandler(async (req, res) => {
 	
 });
 
-export { getPosts, getPostById, addPosts, updatePosts, deletePosts };

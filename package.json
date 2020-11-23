@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A directory for Tech jobs in Nigeria",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
@@ -22,12 +21,17 @@
   "homepage": "https://github.com/abdulsamadayoade/techjobs#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "express-mongo-sanitize": "^2.0.0",
+    "express-rate-limit": "^5.2.3",
+    "helmet": "^4.2.0",
+    "hpp": "^0.2.3",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.13"
+    "mongoose": "^5.10.13",
+    "xss-clean": "^0.1.1"
   },
   "devDependencies": {
     "colors": "^1.4.0",

@@ -1,11 +1,11 @@
-import User from '../models/userModel.js';
-import asyncHandler from 'express-async-handler';
-import generateToken from '../utils/generateToken.js';
+const  User = require('../models/userModel.js');
+const  asyncHandler = require('express-async-handler');
+const  generateToken = require('../utils/generateToken.js');
 
 // @desc     Auth user and get token
 // @route    POST /api/users/login
 // @access   Public
-const authUser = asyncHandler(async (req, res) => {
+exports.authUser = asyncHandler(async (req, res) => {
 	const { email, password } = req.body;
 
 	// Validate email and password
@@ -32,7 +32,7 @@ const authUser = asyncHandler(async (req, res) => {
 // @desc    Register  A new user
 // @route   POST /api/user
 // @access  Public
-const registerUser = asyncHandler(async (req, res) => {
+exports.registerUser = asyncHandler(async (req, res) => {
 	const { name, email, password, confirmPassword } = req.body;
 
 	// Validate name, email and password
@@ -92,7 +92,7 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc 	Get user profile
 // @route	GET /api/users/login
 // @access  Private
-const getUserProfile = asyncHandler(async (req, res) => {
+exports.getUserProfile = asyncHandler(async (req, res) => {
 	const user = await User.findById(req.user._id);
 
 	if (user) {
@@ -113,7 +113,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
 // @desc    Update user profile
 // @route   PUT /api/users/profile
 // @access  Private
-const updateUserProfile = asyncHandler(async (req, res) => {
+exports.updateUserProfile = asyncHandler(async (req, res) => {
 	const user = await User.findById(req.user._id);
 
 	if (user) {
@@ -142,9 +142,8 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 // @desc    Get all users
 // @route   GET /api/users
 // @access  Private
-const getUsers = asyncHandler(async (req, res) => {
+exports.getUsers = asyncHandler(async (req, res) => {
 	const users = await User.find({});
 	res.json(users)
 });
 
-export { authUser, getUserProfile, registerUser, updateUserProfile, getUsers }
