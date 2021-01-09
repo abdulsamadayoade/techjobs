@@ -1,4 +1,4 @@
-const posts = [
+exports.posts = [
 	{
 		jobTitle: 'Senior Testing Engineer',
 		companyName: 'Softcom',
@@ -481,4 +481,4 @@ const posts = [
 	},
 ];
 
-export default posts;
+

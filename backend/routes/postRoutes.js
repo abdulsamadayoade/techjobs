@@ -1,12 +1,13 @@
-import express from 'express';
-import { getPostById, getPosts } from '../controllers/postController.js';
+const  express = require('express');
+const  { addPosts, deletePosts, getPostById, getPosts, updatePosts } = require('../controllers/postController.js');
+const  { admin, protect } = require('../middleware/authMiddleware.js');
 const router = express.Router();
 
 
 
 
-router.route('/').get(getPosts);
-router.route('/:id',).get(getPostById)
+router.route('/').get(getPosts).post(protect, admin, addPosts)
+router.route('/:id').get(getPostById).put(protect, admin, updatePosts).delete(protect, admin, deletePosts)
 
 
-export default router;
+module.exports = router;

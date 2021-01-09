@@ -1,7 +1,12 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const postSchema = mongoose.Schema(
 	{
+		user: {
+			type: mongoose.Schema.Types.ObjectId,
+			required: true,
+			ref: 'User',
+		},
 		jobTitle: {
 			type: String,
 			required: true,
@@ -16,7 +21,7 @@ const postSchema = mongoose.Schema(
 		},
 		durationFromDataPosted: {
 			type: Date,
-            default: Date.now
+            default: Date.now()
 		},
 		companyWebsite: {
 			type: String,
@@ -75,4 +80,4 @@ const postSchema = mongoose.Schema(
 
 const Post = mongoose.model('Post', postSchema);
 
-export default Post;
+module.exports = Post;
