@@ -1,0 +1,67 @@
+/*-------------------------- FONTS ---------------------------*/
+
+@font-face {
+    font-family: "Kumbh Sans Regular";
+    src: url("../../../textfont/KumbhSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Kumbh Sans Bold";
+    src: url("../../../textfont/KumbhSans-Bold.ttf") format("truetype");
+}
+
+/*-------------------------- VARIABLES ---------------------------*/
+
+:root {
+    // COLORS
+    --bg-color: hsl(210, 22%, 96%);
+    --base-bg: hsl(0, 0%, 100%);
+    --input-color: hsl(219, 29%, 14%);
+    --checkbox-bg: hsl(210, 22%, 96%);
+    --heading-color: hsl(219, 29%, 14%);
+
+
+    --primary-color: hsl(235, 69%, 61%);
+    --primary-color-light: hsl(235, 82%, 77%);
+    --primary-color-dark: hsl(219, 29%, 14%);
+    --midnight: hsl(220, 29%, 10%);
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(212, 23%, 69%);
+    --gray-light: hsl(210, 22%, 96%);
+    --gray-dark: hsl(214, 17%, 51%);
+
+    --company-btn-color: hsl(235, 69%, 61%);
+    --company-btn-bg: rgba(89, 100, 224, 0.1);
+    --company-btn-bg-hover: rgba(147, 155, 244, 0.35);
+
+    // FONTS
+    --ff-bold: "Kumbh Sans Bold", sans-serif;
+    --ff-regular: "Kumbh Sans Regular", sans-serif;
+}
+
+/*-------------------------- PRESETS ---------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+html {
+    font-family: var(--ff-regular);
+    scroll-behavior: smooth;
+    font-size: 16px;
+    color: var(--primary-color-dark);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+}

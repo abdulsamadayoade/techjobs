@@ -1,0 +1,11 @@
+@mixin container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.5625rem;
+}
+
+@mixin rwd($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}
