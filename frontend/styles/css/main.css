@@ -1002,7 +1002,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   margin-bottom: 20px;
 }
 
-.dashboard .main-section .post-c--name {
+.dashboard .main-section .post-company {
   height: 50px;
   width: 80px;
   color: var(--white);
@@ -1022,17 +1022,17 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   font-size: 15px;
 }
 
-.dashboard .main-section .posts-options {
+.dashboard .main-section .post-options {
   display: flex;
 }
 
-.dashboard .main-section .posts-options .post-date,
-.dashboard .main-section .posts-options .post-views {
+.dashboard .main-section .post-options .post-date,
+.dashboard .main-section .post-options .post-views {
   font-size: 14px;
   font-family: var(--ff-bold);
   color: #585656;
 }
 
-.dashboard .main-section .posts-options .post-views {
+.dashboard .main-section .post-options .post-views {
   margin-left: auto;
 }
