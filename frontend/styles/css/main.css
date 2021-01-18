@@ -965,7 +965,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   flex: 1;
 }
 
-.dashboard .main-top {
+.main-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -975,25 +975,25 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding: 30px;
 }
 
-.dashboard .main-top .btn {
+.main-top .btn {
   display: inline-flex;
   align-items: center;
   height: 45px;
 }
 
-.dashboard .main-top .btn i {
+.main-top .btn i {
   margin-right: 15px;
 }
 
-.dashboard .main-section {
+.main-section {
   padding: 30px;
 }
 
-.dashboard .main-section h3 {
+.main-section h3 {
   margin-bottom: 30px;
 }
 
-.dashboard .main-section .post {
+.main-section .post {
   display: flex;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -1002,7 +1002,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   margin-bottom: 20px;
 }
 
-.dashboard .main-section .post-company {
+.main-section .post-company {
   height: 50px;
   width: 80px;
   color: var(--white);
@@ -1013,25 +1013,42 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   margin-right: 20px;
 }
 
-.dashboard .main-section .post-details {
+.main-section .post-details {
   width: 90%;
 }
 
-.dashboard .main-section .post-details h4 {
+.main-section .post-details h4 {
   margin-bottom: 10px;
   font-size: 15px;
 }
 
-.dashboard .main-section .post-info {
+.main-section .post-info {
   display: flex;
 }
 
-.dashboard .main-section .post-date, .dashboard .main-section .post-views {
-  font-size: 14px;
+.main-section .post-date, .main-section .post-views {
+  font-size: 12px;
   font-family: var(--ff-bold);
   color: #585656;
 }
 
-.dashboard .main-section .post-views {
+.main-section .post-views {
   margin-left: auto;
+}
+
+.main-section .post-options {
+  margin-top: 8px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-section .post-options * {
+  font-size: 12px;
+  border: none;
+  outline: none;
+  padding: 5px 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: .5px;
 }
