@@ -126,39 +126,41 @@
             border-radius: 5px;
             padding: 12px;
             margin-bottom: 20px;
-        }
 
-        .post-company {
-            height: 50px;
-            width: 80px;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px;
-            margin-right: 20px;
-        }
+            &-company {
+                height: 50px;
+                width: 80px;
+                color: var(--white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                margin-right: 20px;
+            }
 
-        .post-details {
-            width: 90%;
-        }
+            &-details {
+                width: 90%;
+            }
 
-        .post-details h4 {
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
+            &-details h4 {
+                margin-bottom: 10px;
+                font-size: 15px;
+            }
 
-        .post-options {
-            display: flex;
+            &-info {
+                display: flex;
+            }
 
-            .post-date,
-            .post-views {
+            &-date,
+            &-views {
                 font-size: 14px;
                 font-family: var(--ff-bold);
                 color: rgb(88, 86, 86);
             }
 
-            .post-views {margin-left: auto;}
+            &-views {
+                margin-left: auto;
+            }
         }
     }
 }

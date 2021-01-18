@@ -1022,17 +1022,16 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   font-size: 15px;
 }
 
-.dashboard .main-section .post-options {
+.dashboard .main-section .post-info {
   display: flex;
 }
 
-.dashboard .main-section .post-options .post-date,
-.dashboard .main-section .post-options .post-views {
+.dashboard .main-section .post-date, .dashboard .main-section .post-views {
   font-size: 14px;
   font-family: var(--ff-bold);
   color: #585656;
 }
 
-.dashboard .main-section .post-options .post-views {
+.dashboard .main-section .post-views {
   margin-left: auto;
 }
