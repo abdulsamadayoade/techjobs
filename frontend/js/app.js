@@ -25,7 +25,7 @@ input.addEventListener("change", (e) => {
 });
 
 // TABS SWITCH
-function openTab(evt, cityName) {
+function openTab(evt, tabName) {
     // DECLARE ALL VARIABLES
     var i, tabcontent, tablinks;
 
@@ -42,6 +42,6 @@ function openTab(evt, cityName) {
     }
 
     // SHOW THE CURRENT TAB, AND ADD AN "ACTIVE" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += "active";
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add('active');
 }
