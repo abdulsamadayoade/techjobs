@@ -91,7 +91,7 @@
     }
 
     #posts-tab,
-    #dashboard-tab {
+    #stats-tab {
         flex: 1;
     }
 }
@@ -106,15 +106,46 @@
     background-color: var(--primary-color);
 }
 
+// STATS SECTION
+.stats-top {
+    @extend %tabs-shared;
+}
+
+.stats-section {
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+
+    .stat-box {
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+        padding: 40px 30px;
+        margin-bottom: 30px;
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-size: 23px;
+            margin-bottom: 35px;
+        }
+
+        p {
+            font-size: 23px;
+        }
+
+        small {
+            margin-bottom: 30px;
+        }
+    }
+}
+
 // POSTS SECTION
-.main-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    background-color: var(--gray-light);
-    padding: 30px;
+.posts-top {
+    @extend %tabs-shared;
 
     .btn {
         display: inline-flex;
@@ -125,7 +156,7 @@
     }
 }
 
-.main-section {
+.posts-section {
     padding: 30px;
 
     h3 {

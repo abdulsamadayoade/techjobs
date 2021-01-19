@@ -13,9 +13,9 @@
             <nav class="sidebar tab">
                 <ul class="side-nav">
                     <li class="side-nav__item">
-                        <a href="#" class="side-nav__link tablinks" onclick="openTab(event, 'dashboard-tab')" id="defaultOpen">
+                        <a href="#" class="side-nav__link tablinks" onclick="openTab(event, 'stats-tab')" id="defaultOpen">
                             <i class="fas fa-chart-bar"></i>
-                            <span>Dashboard</span>
+                            <span>Stats</span>
                         </a>
                     </li>
                     <li class="side-nav__item">
@@ -36,18 +36,40 @@
                     <a href="index.html" class="logo">techtalent</a>
                 </div>
             </nav>
-            <section id="dashboard-tab" class="tabcontent">
-                <h1>Good</h1>
+            <section id="stats-tab" class="tabcontent">
+                <div class="stats-top">
+                    <h2>Stats</h2>
+                </div>
+                <div class="stats-section">
+                    <div class="stat__total-posts stat-box bg-1">
+                        <h3>Total Posts</h3>
+                        <p>500</p>
+                    </div>
+                    <div class="stat__total-views stat-box bg-2">
+                        <h3>Total Views</h3>
+                        <p>30000</p>
+                    </div>
+                    <div class="stat__total-posts--monthly stat-box bg-3">
+                        <h3>Total Posts</h3>
+                        <small>this month</small>
+                        <p>500</p>
+                    </div>
+                    <div class="stat__total-views--monthly stat-box bg-4">
+                        <h3>Total Views</h3>
+                        <small>this month</small>
+                        <p>5000</p>
+                    </div>
+                </div>
             </section>
             <section id="posts-tab" class="tabcontent">
-                <div class="main-top">
+                <div class="posts-top">
                     <h2>Posts</h2>
                     <button class="btn btn-primary">
                         <i class="fas fa-pen-nib"></i>
                         New Post
                     </button>
                 </div>
-                <div class="main-section">
+                <div class="posts-section">
                     <h3>All Posts</h3>
                     <div class="posts-container">
                         <div class="post">

@@ -49,6 +49,16 @@
     line-height: 1.25rem;
 }
 
+%tabs-shared {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: var(--gray-light);
+    padding: 30px;
+}
+
 .row {
     display: flex;
 }
