@@ -23,3 +23,25 @@ input.addEventListener("change", (e) => {
         document.body.setAttribute("data-theme", "light");
     }
 });
+
+// TABS SWITCH
+function openTab(evt, cityName) {
+    // DECLARE ALL VARIABLES
+    var i, tabcontent, tablinks;
+
+    // GET ALL ELEMENTS WITH CLASS = "tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // GET ALL ELEMENTS WITH CLASS ="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace("active", "");
+    }
+
+    // SHOW THE CURRENT TAB, AND ADD AN "ACTIVE" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += "active";
+}

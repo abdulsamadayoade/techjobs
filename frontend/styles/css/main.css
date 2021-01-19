@@ -961,7 +961,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding-bottom: 20px;
 }
 
-.dashboard .posts-tab {
+.dashboard #posts-tab {
   flex: 1;
 }
 
@@ -1051,4 +1051,25 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   cursor: pointer;
   border-radius: 5px;
   letter-spacing: .5px;
+}
+
+.tab a.active {
+  color: red;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

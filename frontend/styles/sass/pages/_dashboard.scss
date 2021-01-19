@@ -90,7 +90,7 @@
         padding-bottom: 20px;
     }
 
-    .posts-tab {
+    #posts-tab {
         flex: 1;
     }
 }
@@ -181,4 +181,21 @@
             }
         }
     }
+}
+
+.tab a.active {
+    color: red;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

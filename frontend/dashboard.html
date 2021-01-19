@@ -10,16 +10,16 @@
 <body>
     <div class="dashboard">
         <div class="dashboard__container">
-            <nav class="sidebar">
+            <nav class="sidebar tab">
                 <ul class="side-nav">
                     <li class="side-nav__item">
-                        <a href="#" class="side-nav__link">
+                        <a href="#" class="side-nav__link tablinks" onclick="openTab(event, 'dashboard-tab')" id="defaultOpen">
                             <i class="fas fa-chart-bar"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="side-nav__item side-nav__item--active">
-                        <a href="#" class="side-nav__link">
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link tablinks" onclick="openTab(event, 'posts-tab')">
                             <i class="fas fa-newspaper"></i>
                             <span>Posts</span>
                         </a>
@@ -36,7 +36,10 @@
                     <a href="index.html" class="logo">techtalent</a>
                 </div>
             </nav>
-            <main class="posts-tab">
+            <section id="dashboard-tab" class="tabcontent">
+                <h1>Good</h1>
+            </section>
+            <section id="posts-tab" class="tabcontent">
                 <div class="main-top">
                     <h2>Posts</h2>
                     <button class="btn btn-primary">
@@ -129,8 +132,13 @@
                         </div>
                     </div>
                 </div>
-            </main>
+            </section>
         </div>
     </div>
+    <script src="js/app.js"></script>
+    <script>
+        // LOAD DEFAULT TAB
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 </html>
