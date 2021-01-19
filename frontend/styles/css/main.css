@@ -928,7 +928,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
 }
 
-.dashboard .side-nav__item:hover::before, .dashboard .side-nav__item--active::before {
+.dashboard .side-nav__item:hover::before {
   transform: scaleY(1);
   width: 100%;
 }
@@ -961,8 +961,18 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding-bottom: 20px;
 }
 
-.dashboard #posts-tab {
+.dashboard #posts-tab,
+.dashboard #dashboard-tab {
   flex: 1;
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+.tablinks.active {
+  background-color: var(--primary-color);
 }
 
 .main-top {
@@ -1049,20 +1059,8 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   outline: none;
   padding: 5px 7px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
   letter-spacing: .5px;
-}
-
-.tab a.active {
-  color: red;
-}
-
-.tabcontent {
-  display: none;
-}
-
-.tabcontent {
-  animation: fadeEffect 1s;
 }
 
 @keyframes fadeEffect {

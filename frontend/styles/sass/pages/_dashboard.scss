@@ -1,3 +1,4 @@
+// GENERAL DASHBOARD STYLES (SIDEBAR AND RIGHT SECTION)
 .dashboard {
     width: 100%;
     background-color: var(--primary-color);
@@ -54,8 +55,7 @@
                         background-color .1s;
         }
 
-        &__item:hover::before,
-        &__item--active::before {
+        &__item:hover::before {
             transform: scaleY(1);
             width: 100%;
         }
@@ -90,9 +90,20 @@
         padding-bottom: 20px;
     }
 
-    #posts-tab {
+    #posts-tab,
+    #dashboard-tab {
         flex: 1;
     }
+}
+
+// FOR THE TABS
+.tabcontent {
+    display: none;
+    animation: fadeEffect 1s;
+}
+
+.tablinks.active {
+    background-color: var(--primary-color);
 }
 
 // POSTS SECTION
@@ -176,25 +187,14 @@
                 outline: none;
                 padding: 5px 7px;
                 cursor: pointer;
-                border-radius: 5px;
+                border-radius: 3px;
                 letter-spacing: .5px;
             }
         }
     }
 }
 
-.tab a.active {
-    color: red;
-}
-
-.tabcontent {
-    display: none;
-}
-
-.tabcontent {
-    animation: fadeEffect 1s;
-}
-
+// ANIMATIONS
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
