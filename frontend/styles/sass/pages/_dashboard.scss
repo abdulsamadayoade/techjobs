@@ -231,6 +231,27 @@
     &__top {
         @extend %tabs-shared;
     }
+
+    &__section {
+        padding: 30px;
+
+        .input-div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+        }
+
+        input {
+            display: block;
+            height: 50px;
+            font-family: inherit;
+            padding: 0 10px;
+            outline: none;
+            position: relative;
+            border: 1px solid var(--gray-dark);
+            border-radius: 2px;
+        }
+    }
 }
 
 // ANIMATIONS

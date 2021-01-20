@@ -121,7 +121,7 @@ main .filter-box, .modal-box .time-filter-box-m, .search-grid .time-filter-box {
   line-height: 1.25rem;
 }
 
-.stats-top, .posts-top {
+.stats-top, .posts-top, .new-post__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -972,7 +972,8 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
 }
 
 .dashboard #posts-tab,
-.dashboard #stats-tab {
+.dashboard #stats-tab,
+.dashboard #new-post {
   flex: 1;
 }
 
@@ -1093,6 +1094,27 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   cursor: pointer;
   border-radius: 3px;
   letter-spacing: .5px;
+}
+
+.new-post__section {
+  padding: 30px;
+}
+
+.new-post__section .input-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.new-post__section input {
+  display: block;
+  height: 50px;
+  font-family: inherit;
+  padding: 0 10px;
+  outline: none;
+  position: relative;
+  border: 1px solid var(--gray-dark);
+  border-radius: 2px;
 }
 
 @keyframes fadeEffect {
