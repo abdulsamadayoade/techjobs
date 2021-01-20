@@ -91,7 +91,8 @@
     }
 
     #posts-tab,
-    #stats-tab {
+    #stats-tab,
+    #new-post {
         flex: 1;
     }
 }
@@ -222,6 +223,13 @@
                 letter-spacing: .5px;
             }
         }
+    }
+}
+
+// NEW POST SECTION
+.new-post {
+    &__top {
+        @extend %tabs-shared;
     }
 }
 
