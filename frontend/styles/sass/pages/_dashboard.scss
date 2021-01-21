@@ -275,6 +275,14 @@
                 height: 100px;
             }
         }
+
+        .post-btns {
+            margin-top: 30px;
+            .cancel {
+                margin-left: 20px;
+                background-color: var(--gray-dark);
+            }
+        }
     }
 }
 

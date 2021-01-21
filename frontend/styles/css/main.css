@@ -1140,6 +1140,15 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   height: 100px;
 }
 
+.new-post__section .post-btns {
+  margin-top: 30px;
+}
+
+.new-post__section .post-btns .cancel {
+  margin-left: 20px;
+  background-color: var(--gray-dark);
+}
+
 @keyframes fadeEffect {
   from {
     opacity: 0;
