@@ -235,7 +235,7 @@
     &__section {
         padding: 30px;
 
-        .input-div {
+        .inputs-box {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 30px;
@@ -252,7 +252,8 @@
             border-radius: 2px;
         }
 
-        .post-description {
+        .description-box,
+        .apply-box {
             margin-top: 30px;
             width: 100%;
 
@@ -266,6 +267,12 @@
                 font-size: 14px;
                 padding: 10px;
                 line-height: 1.55;
+            }
+        }
+
+        .apply-box {
+            textarea {
+                height: 100px;
             }
         }
     }

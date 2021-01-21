@@ -1100,7 +1100,7 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   padding: 30px;
 }
 
-.new-post__section .input-div {
+.new-post__section .inputs-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
@@ -1117,12 +1117,14 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   border-radius: 2px;
 }
 
-.new-post__section .post-description {
+.new-post__section .description-box,
+.new-post__section .apply-box {
   margin-top: 30px;
   width: 100%;
 }
 
-.new-post__section .post-description textarea {
+.new-post__section .description-box textarea,
+.new-post__section .apply-box textarea {
   width: 100%;
   border: 1px solid var(--gray-dark);
   border-radius: 2px;
@@ -1132,6 +1134,10 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   font-size: 14px;
   padding: 10px;
   line-height: 1.55;
+}
+
+.new-post__section .apply-box textarea {
+  height: 100px;
 }
 
 @keyframes fadeEffect {
