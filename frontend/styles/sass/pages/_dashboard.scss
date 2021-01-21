@@ -251,6 +251,23 @@
             border: 1px solid var(--gray-dark);
             border-radius: 2px;
         }
+
+        .post-description {
+            margin-top: 30px;
+            width: 100%;
+
+            textarea {
+                width: 100%;
+                border: 1px solid var(--gray-dark);
+                border-radius: 2px;
+                height: 300px;
+                resize: none;
+                font-family: inherit;
+                font-size: 14px;
+                padding: 10px;
+                line-height: 1.55;
+            }
+        }
     }
 }
 
