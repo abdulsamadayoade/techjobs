@@ -1096,6 +1096,26 @@ main label.checkbox input.checkbox:checked + .check-icon::before {
   letter-spacing: .5px;
 }
 
+.pagination-box {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-box a {
+  margin: 0 12px;
+  border: 1px solid var(--gray-dark);
+  padding: 8px 14px;
+  color: var(--gray-dark);
+  transition: all .3s;
+}
+
+.pagination-box a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
 .new-post__section {
   padding: 30px;
 }
