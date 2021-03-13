@@ -42,8 +42,8 @@ app.use(limiter);
 //Prevent HTTP params pollution
 app.use(hpp());
 
-app.use(`/api/posts`, postRoutes);
-app.use(`/api/users`, userRoutes);
+app.use(`/api/v1/posts`, postRoutes);
+app.use(`/api/v1/auth`, userRoutes);
 
 app.use(errorHandler)
 app.use(morgan("tiny"));
